@@ -107,6 +107,11 @@
     margin-top:50px;
 }
 
+img.guide_text{
+  margin-left: 42px;
+  margin-top: 36px;
+}
+
 #content .main_content .bottom{
     background-image:url("../image/event/slide_bottom.png");
     height:119px;
