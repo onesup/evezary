@@ -1,0 +1,11 @@
+development:
+  :user_name: "onesup.lee@gmail.com"
+  :password: "put_your_email_password_here"
+
+test:
+  :user_name: "onesup.lee@gmail.com"
+  :password: "put_your_email_password_here"
+
+production:
+  :user_name: "onesup.lee@gmail.com"
+  :password: "put_your_email_password_here"
