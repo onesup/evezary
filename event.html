@@ -44,6 +44,14 @@
 				}, function() {
 					$(this).attr("src", "./image/top_link_behind.png");
 				});
+				
+				$("#content .main_content .images").click(function() {
+					$("#content .main_content .sub").hide();
+				});
+				
+				$("#content .main_content .sub .box").click(function() {
+					$("#content .main_content .sub").hide();
+				});
 			});
   			function share() {
   				var share = {
