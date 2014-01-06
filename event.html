@@ -52,6 +52,11 @@
 				$("#content .main_content .sub .box").click(function() {
 					$("#content .main_content .sub").hide();
 				});
+				
+				$("a[href^='#event_content']").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$('[name="'+this.hash.substring(1)+'"]').offset().top}, 300);
+				}); // A href Smooth Scroll
 			});
   			function share() {
   				var share = {
@@ -133,8 +138,8 @@
                                 </div>
                             </div>
                             <div class="box2">
-                            	<a href="#popup_detail" rel="modal:open" onclick="selectItem(imageslider_current + 1);"><img class="left rollover" src="image/event/vote_design.png"/></a>
-                                <a href="#popup_rumor" rel="modal:open"><img class="right rollover" src="image/event/event_rumor.png" /></a>
+                            	<a href="#event_content_vote"><img class="left rollover" src="image/event/vote_design.png"/></a>
+                                <a href="#event_content_rumor"><img class="right rollover" src="image/event/event_rumor.png" /></a>
                             </div>
                         </div>
                     </div>
@@ -148,6 +153,7 @@
 				</div>
 			</div>
 			<div class="event_content">
+				<a name="event_content_vote"> </a>
 				<div class="sub">
 					<div class="top table">
 						<div class="table-cell">
@@ -212,6 +218,7 @@
 			</div>
 			<div class="bottom">
 				<div class="sub table">
+					<a name="event_content_rumor"> </a>
 					<img src="image/event/content_bottom.png"/>
 					<div class="button">
 						<a href="#" onclick="share();"><img src="image/event/facebook.png" class="rollover" /></a>
