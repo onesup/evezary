@@ -3,16 +3,12 @@
 	<div id="header">
 		<div class="sub">
 			<div class="logo left">
-				<%= image_tag("logo.png", alt: "evezary logo" />
+				<%= image_tag("logo.png", alt: "evezary logo") %>
 			</div>
 			<div class="menu right">
-        <%= link_to event_path do %>
-				  <%= image_tag("top_link_event.png", alt: "event" />
-        <% end %>
-				<%= image_tag("top_link_seperator.png", alt: "seperator" />
-        <% link_to story_path do %>
-          <%= image_tag("top_link_behind_bold.png", alt: "behind" />
-        <% end %>
+        <%= link_to image_tag("top_link_event.png", alt: "event"), event_path %>
+				<%= image_tag("top_link_seperator.png", alt: "seperator") %>
+        <%= link_to image_tag("top_link_behind_bold.png", alt: "behind"), story_path %>
 			</div>
 		</div>
 	</div>
@@ -21,9 +17,9 @@
 	<!-- --------------sub_header--------------- -->
 	<div id="sub_header" style="clear: both;">
 		<div class="sub">
-			<%= image_tag("title_logo.png", alt: "logo" />
-			<%= image_tag("title_seperator.png", alt: "seperator" />
-			<%= image_tag("title_behind.png", alt: "behind" />
+			<%= image_tag("title_logo.png", alt: "logo") %>
+			<%= image_tag("title_seperator.png", alt: "seperator") %>
+			<%= image_tag("title_behind.png", alt: "behind") %>
 		</div>
 	</div>
 	<!-- --------------sub_header--------------- -->
@@ -34,20 +30,22 @@
 			<div class="top">
 				<iframe src="//player.vimeo.com/video/69146061" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 			</div>
-			<div class="bottom">
+			<div class="main_content">
 				<div class="left">
-					<%= image_tag("behind_first_title.png", alt: "behind first title" class="title" /><br>
-					<%= image_tag("behind_first_content.png", alt: "behind first content" />
+					<%= image_tag("behind_first_title.png", alt: "behind first title", class: "title") %>
+          <br />
+					<%= image_tag("behind_first_content.png", alt: "behind first content") %>
 				</div>
 				<div class="right">
-					<%= image_tag("behind_first_image.png", alt: "behind first image" />
+					<%= image_tag("behind_first_image.png", alt: "behind first image") %>
 				</div>
 				<div class="clear left">
-					<%= image_tag("behind_second_image.png", alt: "behind second image" />
+					<%= image_tag("behind_second_image.png", alt: "behind second image") %>
 				</div>
 				<div class="right">
-					<%= image_tag("behind_second_title.png", alt: "behind second title" class="title" /><br>
-					<%= image_tag("behind_second_content.png", alt: "behind second content" />
+					<%= image_tag("behind_second_title.png", alt: "behind second title", class: "title") %>
+          <br>
+					<%= image_tag("behind_second_content.png", alt: "behind second content") %>
 				</div>
 			</div>
 		</div>
@@ -57,8 +55,8 @@
 	<!-- --------------footer--------------- -->
 	<div id="footer">
 		<div class="sub">
-			<%= image_tag("bottom_line.png", alt: "bottom line" />
-			<%= image_tag("bottom.png", alt: "bottom" />
+			<%= image_tag("bottom_line.png", alt: "bottom line") %>
+			<%= image_tag("bottom.png", alt: "bottom") %>
 		</div>
 	</div>
 	<!-- --------------footer--------------- -->

@@ -70,13 +70,9 @@
 			<%= image_tag("logo.png", alt: "evezary logo") %>
 		</div>
 		<div class="menu right">
-      <%= link_to event_path do %>
-        <%= image_tag("top_link_event_bold.png", alt: "event") %>
-      <% end %>
+      <%= link_to image_tag("top_link_event_bold.png", alt: "event"), event_path %>
 			<%= image_tag("top_link_seperator.png", alt: "seperator") %>
-			<%= link_to story_path do %>
-        <%= image_tag("top_link_behind.png", alt: "behind") %>
-      <% end %>
+			<%= link_to image_tag("top_link_behind.png", alt: "behind"), story_path %>
 		</div>
 	</div>
 </div>
@@ -98,22 +94,22 @@
 				</div>
 			</div>
 			<div class="sub">
-                    <div class="center">
-                        <div id="guide_box" class="box table">
-                        	<div class="table-cell">
-                           		<%= image_tag("event/guide_text.png", class: "guide_text") %>
-                            </div>
-                        </div>
-                        <div class="box2">
-                        	<a href="#event_content_vote">
-                            <%= image_tag("event/vote_design.png", class: "left rollover") %>
-                          </a>
-                            <a href="#event_content_rumor">
-                              <%= image_tag("event/event_rumor.png", class: "right rollover") %>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+          <div class="center">
+              <div id="guide_box" class="box table">
+              	<div class="table-cell">
+                 		<%= image_tag("event/guide_text.png", class: "guide_text") %>
+                  </div>
+              </div>
+              <div class="box2">
+              	<a href="#event_content_vote">
+                  <%= image_tag("event/vote_design.png", class: "left rollover") %>
+                </a>
+                  <a href="#event_content_rumor">
+                    <%= image_tag("event/event_rumor.png", class: "right rollover") %>
+                  </a>
+              </div>
+          </div>
+      </div>
 			<%= image_tag("event/arrow_left.png", alt: "left", class: "imageslider_left rollover") %>
 			<%= image_tag("event/arrow_right.png", alt: "right", class: "imageslider_right rollover") %>
 		</div>
