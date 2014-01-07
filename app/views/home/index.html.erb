@@ -70,7 +70,9 @@
 			<img src="./image/logo.png" alt="evezary logo" />
 		</div>
 		<div class="menu right">
-			<a href="./event.html"><img src="./image/top_link_event_bold.png" alt="event" /></a>
+      <%= link_to event_path do %>
+        <img src="./image/top_link_event_bold.png" alt="event" />
+      <% end %>
 			<img src="./image/top_link_seperator.png" alt="seperator" />
 			<%= link_to story_path do %>
         <img src="./image/top_link_behind.png" alt="behind" />
@@ -99,8 +101,12 @@
                             </div>
                         </div>
                         <div class="box2">
-                        	<a href="#event_content_vote"><img class="left rollover" src="image/event/vote_design.png"/></a>
-                            <a href="#event_content_rumor"><img class="right rollover" src="image/event/event_rumor.png" /></a>
+                        	<a href="#event_content_vote">
+                            <img class="left rollover" src="image/event/vote_design.png"/>
+                          </a>
+                            <a href="#event_content_rumor">
+                              <img class="right rollover" src="image/event/event_rumor.png" />
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -182,8 +188,12 @@
 			<a name="event_content_rumor"> </a>
 			<img src="image/event/content_bottom.png"/>
 			<div class="button">
-				<a href="#" onclick="share();"><img src="image/event/facebook.png" class="rollover" /></a>
-				<a href="#popup_rumor_blog_url" rel="modal:open"><img src="image/event/blog.png" class="rollover" /></a>
+				<a href="#" onclick="share();">
+          <img src="image/event/facebook.png" class="rollover" />
+        </a>
+				<a href="#popup_rumor_blog_url" rel="modal:open">
+          <img src="image/event/blog.png" class="rollover" />
+        </a>
 			</div>
 		</div>
 	</div>
@@ -211,12 +221,18 @@
 </div>
 <div id="popup_detail" class="popup">
 	<div class="sub"> </div>
-	<a href="#popup_vote" rel="modal:open"><img src="./image/popup_detail/vote.png" alt="vote" class="vote rollover" /></a>
+	<a href="#popup_vote" rel="modal:open">
+    <img src="./image/popup_detail/vote.png" alt="vote" class="vote rollover" />
+  </a>
 </div>
 <div id="popup_vote" class="popup">
 	<div class="top"> </div>
-	<a href="#popup_input" rel="modal:open"><img src="./image/popup_vote/vote.png" alt="vote" class="vote rollover" /></a>
-	<a href="" rel="modal:close"><img src="./image/popup_vote/return.png" alt="vote" class="return rollover" /></a>
+	<a href="#popup_input" rel="modal:open">
+    <img src="./image/popup_vote/vote.png" alt="vote" class="vote rollover" />
+  </a>
+	<a href="" rel="modal:close">
+    <img src="./image/popup_vote/return.png" alt="vote" class="return rollover" />
+  </a>
 </div>
 <form action="" method="post" id="popup_input" class="popup">
 	<div class="sub">
@@ -302,13 +318,19 @@
 		<div class="background2">
 			<div class="nav table">
 				<div class="table-cell">
-					<a href="#" onclick="share();"><img src="image/popup_rumor/facebook.png" class="rollover" /></a>
-					<a href="#popup_rumor_blog_url" rel="modal:open"><img src="image/popup_rumor/blog.png" class="rollover" /></a>
+					<a href="#" onclick="share();">
+            <img src="image/popup_rumor/facebook.png" class="rollover" />
+          </a>
+					<a href="#popup_rumor_blog_url" rel="modal:open">
+            <img src="image/popup_rumor/blog.png" class="rollover" />
+          </a>
 				</div>
 			</div>
 		</div>
 		<div class="bottom">
-			<a href="#" rel="modal:close"><img src="image/popup_rumor/button.png" class="rollover" /></a>
+			<a href="#" rel="modal:close">
+        <img src="image/popup_rumor/button.png" class="rollover" />
+      </a>
 		</div>
 	</div>
 </div>
