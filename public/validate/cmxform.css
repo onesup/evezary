@@ -20,7 +20,7 @@ form.cmxform legend, form.cmxform label {
 form.cmxform fieldset {
 	border: none;
 	border-top: 1px solid #C9DCA6;
-	background: url(../images/cmxform-fieldset.gif) left bottom repeat-x;
+	background: image-url(../images/cmxform-fieldset.gif) left bottom repeat-x;
 	background-color: #F8FDEF;
 }
 
@@ -30,7 +30,7 @@ form.cmxform fieldset fieldset {
 
 form.cmxform fieldset p, form.cmxform fieldset fieldset {
 	padding: 5px 10px 7px;
-	background: url(../images/cmxform-divider.gif) left bottom repeat-x;
+	background: image-url(../images/cmxform-divider.gif) left bottom repeat-x;
 }
 
 form.cmxform label.error, label.error {

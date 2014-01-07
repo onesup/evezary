@@ -60,7 +60,7 @@
 #content .main_content .main_content_nav{
     height:909px;
     position:relative;
-    background-image:url("../image/event/slide_background.png");
+    background-image:image-url("event/slide_background.png");
 }
 
 #content .main_content .arrow_left{
@@ -108,12 +108,11 @@
 }
 
 img.guide_text{
-  margin-left: 42px;
-  margin-top: 36px;
+
 }
 
 #content .main_content .bottom{
-    background-image:url("../image/event/slide_bottom.png");
+    background-image:image-url("event/slide_bottom.png");
     height:119px;
     
 }
@@ -138,7 +137,7 @@ img.guide_text{
 }
 
 #content .event_content{
-	background-image:url("../image/event/background.png");
+	background-image:image-url("event/background.png");
 }
 
 #content .event_content .sub{
@@ -184,7 +183,7 @@ img.guide_text{
 }
 
 #content .bottom{
-    background-image:url(../image/event/background.png);
+    background-image:image-url("event/background.png");
     background-position:center center;
 }
 
@@ -230,12 +229,12 @@ img.guide_text{
 
 #footer .main_footer{
     height:236px;
-    background-image:url(../image/event/bottom_background.png);
+    background-image: url("event/bottom_background.png");
 }
 
 #footer .sub_footer{
     height:262px;
-    background-image:url(../image/event/background.png);
+    background-image: url("event/background.png");
     background-position:center center;
 }
 
@@ -257,7 +256,7 @@ img.guide_text{
 #popup_detail{
     width:924px;
     height:623px;
-    background-image:url("../image/popup_detail/background_pattern.png");
+    background-image:image-url("popup_detail/background_pattern.png");
     background-repeat:no-repeat;
     padding: 42px;
     position:relative;
@@ -273,7 +272,7 @@ img.guide_text{
 #popup_detail .vote{
     width:343px;
     height:79px;
-    background-image:url("../image/popup_detail/vote.png");
+    background-image:image-url("popup_detail/vote.png");
     background-repeat:no-repeat;
     position:absolute;
     bottom:39px;
@@ -285,7 +284,7 @@ img.guide_text{
 #popup_vote{
     width:502px;
     height:598px;
-    background-image:url("../image/popup_vote/background_pattern.png");
+    background-image:image-url("popup_vote/background_pattern.png");
     background-repeat:no-repeat;
     padding:40px 50px 0;
     position:relative;
@@ -303,7 +302,7 @@ img.guide_text{
     bottom:45px;
     width:195px;
     height:79px;
-    background-image:url("../image/popup_vote/vote.png");
+    background-image:image-url("popup_vote/vote.png");
     background-repeat:no-repeat;
 }
 
@@ -313,7 +312,7 @@ img.guide_text{
     bottom:45px;
     width:195px;
     height:79px;
-    background-image:url("../image/popup_vote/return.png");
+    background-image:image-url("popup_vote/return.png");
     background-repeat:no-repeat;
 }
 /*----------------popup_vote------------------*/
@@ -322,7 +321,7 @@ img.guide_text{
 #popup_input{
     width:502px;
     height:598px;
-    background-image:url("../image/popup_input/background.png");
+    background-image:image-url("popup_input/background.png");
     background-repeat:no-repeat;
 }
 
@@ -336,7 +335,7 @@ img.guide_text{
 #popup_input .sub .title{
     width:187px;
     height:61px;
-    background-image:url("../image/popup_input/title.png");
+    background-image:image-url("popup_input/title.png");
     margin:0 auto 30px;
 }
 
@@ -358,7 +357,7 @@ img.guide_text{
 #popup_input .sub .background2 .nav .explain{
     width:341px;
     height:15px;
-    background-image:url("../image/popup_input/explain.png");
+    background-image:image-url("popup_input/explain.png");
     background-repeat:no-repeat;
     margin:0 auto 10px;
 }
@@ -382,14 +381,14 @@ img.guide_text{
 }
 
 #popup_input .sub .background2 .nav .name .right_image input{
-    background-image:url("../image/popup_input/Name_bar.png");
+    background-image:image-url("popup_input/Name_bar.png");
     width:269px;
     height:44px;
     padding-left: 5px;
 }
 
 #popup_input .sub .background2 .nav .phone .right_image input{
-    background-image:url("../image/popup_input/phone_bar.png");
+    background-image:image-url("popup_input/phone_bar.png");
     width:84px;
     height:44px;
     padding-left: 5px;
@@ -397,7 +396,7 @@ img.guide_text{
 }
 
 #popup_input .sub .background2 .nav .email .right_image input{
-    background-image:url("../image/popup_input/email_bar.png");
+    background-image:image-url("popup_input/email_bar.png");
     width:269px;
     height:44px;
     padding-left: 5px;
@@ -436,7 +435,7 @@ img.guide_text{
 #popup_rumor{
     width:502px;
     height:510px;
-    background-image:url("../image/popup_rumor/background.png");
+    background-image:image-url("popup_rumor/background.png");
 }
 
 #popup_rumor .sub{
@@ -477,7 +476,7 @@ img.guide_text{
 #popup_rumor_blog_url{
     width:502px;
     height:510px;
-    background-image:url("../image/popup_rumor_blog_url/background.png");
+    background-image:image-url("popup_rumor_blog_url/background.png");
 }
 
 #popup_rumor_blog_url .sub{
@@ -525,7 +524,7 @@ img.guide_text{
 
 /*----------------popup_personal_info------------------*/
 #popup_personal_info{
-    background-image:url("../image/popup_personal_info/background.png");
+    background-image:image-url("popup_personal_info/background.png");
     width:502px;
     height:510px;
 }
@@ -557,7 +556,7 @@ img.guide_text{
 
 /*----------------popup_winner------------------*/
 #popup_winner{
-    background-image:url("../image/popup_winner/background.png");
+    background-image:image-url("popup_winner/background.png");
     width:502px;
     height:510px;
 }

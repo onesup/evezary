@@ -1,9 +1,9 @@
 <script>
 	$(function() {
 		$(".menu a:eq(1) img").hover(function() {
-			$(this).attr("src", "./image/top_link_behind_bold.png");
+			$(this).attr("src", "<%= asset_path('top_link_behind_bold.png') %>");
 		}, function() {
-			$(this).attr("src", "./image/top_link_behind.png");
+			$(this).attr("src", "<%= asset_path('top_link_behind.png') %>");
 		});
 	
 		$("#content .main_content .images").click(function() {
@@ -24,7 +24,7 @@
 				method: "feed",
 				name: "League of Legends",
 				link: "leagueoflegends.co.kr",
-				picture: "localhost/evezary/image/popup_vote/image_1.png",
+				picture: "<%= asset_path('popup_vote/image_1.png') %>",
 				caption: "Welcome to the summoner's lift!",
 				description: "30 seconds to minion spawn!"
 			};
@@ -67,15 +67,15 @@
 <div id="header">
 	<div class="sub">
 		<div class="logo left">
-			<img src="./image/logo.png" alt="evezary logo" />
+			<%= image_tag("logo.png", alt: "evezary logo") %>
 		</div>
 		<div class="menu right">
       <%= link_to event_path do %>
-        <img src="./image/top_link_event_bold.png" alt="event" />
+        <%= image_tag("top_link_event_bold.png", alt: "event") %>
       <% end %>
-			<img src="./image/top_link_seperator.png" alt="seperator" />
+			<%= image_tag("top_link_seperator.png", alt: "seperator") %>
 			<%= link_to story_path do %>
-        <img src="./image/top_link_behind.png" alt="behind" />
+        <%= image_tag("top_link_behind.png", alt: "behind") %>
       <% end %>
 		</div>
 	</div>
@@ -84,38 +84,42 @@
 	<div class="main_content">
 		<div class="imageslider" style="position:relative;">
 			<div class="images">
-				<div class="image"><img src="./image/skin_1.jpg" alt="skin1" />
+				<div class="image">
+          <%= image_tag("skin_1.jpg", alt: "skin1") %>
 				</div>
-				<div class="image"><img src="./image/skin_2.jpg" alt="skin2" />
+				<div class="image">
+          <%= image_tag("skin_2.jpg", alt: "skin2") %>
 				</div>
-				<div class="image"><img src="./image/skin_3.jpg" alt="skin3" />
+				<div class="image">
+          <%= image_tag("skin_3.jpg", alt: "skin3") %>
 				</div>
-				<div class="image"><img src="./image/skin_4.jpg" alt="skin4" />
+				<div class="image">
+          <%= image_tag("skin_4.jpg", alt: "skin4") %>
 				</div>
 			</div>
 			<div class="sub">
                     <div class="center">
                         <div id="guide_box" class="box table">
                         	<div class="table-cell">
-                           		<img src="image/event/guide_text.png"/ class="guide_text">
+                           		<%= image_tag("event/guide_text.png", class: "guide_text") %>
                             </div>
                         </div>
                         <div class="box2">
                         	<a href="#event_content_vote">
-                            <img class="left rollover" src="image/event/vote_design.png"/>
+                            <%= image_tag("event/vote_design.png", class: "left rollover") %>
                           </a>
                             <a href="#event_content_rumor">
-                              <img class="right rollover" src="image/event/event_rumor.png" />
+                              <%= image_tag("event/event_rumor.png", class: "right rollover") %>
                             </a>
                         </div>
                     </div>
                 </div>
-			<img src="./image/event/arrow_left.png" alt="left" class="imageslider_left rollover" />
-			<img src="./image/event/arrow_right.png" alt="right" class="imageslider_right rollover" />
+			<%= image_tag("event/arrow_left.png", alt: "left", class: "imageslider_left rollover") %>
+			<%= image_tag("event/arrow_right.png", alt: "right", class: "imageslider_right rollover") %>
 		</div>
 		<div class="bottom">
 			<div class="nav">
-                	<div><img src="image/event/slide_bottom_image.png"/></div>
+                	<div><%= image_tag("event/slide_bottom_image.png") %></div>
 			</div>
 		</div>
 	</div>
@@ -124,59 +128,59 @@
 		<div class="sub">
 			<div class="top table">
 				<div class="table-cell">
-					<img src="image/event/content_top.png"/>
+					<%= image_tag("event/content_top.png") %>
 				</div>
 			</div>
 			<div class="middle">
 				<div class="left">
-					<img src="image/event/content_image.png"/>
+					<%= image_tag("event/content_image.png") %>
 					<div class="content_image_explain">
 						<a href="#popup_detail" rel="modal:open" onclick="selectItem(1);">
-							<img src="image/event/content_image_explain.png"/>
+							<%= image_tag("event/content_image_explain.png")%>
 						</a>
 					</div>
 					<div class="vote">
 						<a href="#popup_vote" rel="modal:open" onclick="selectItem(1);">
-							<img src="image/event/vote.png" class="rollover" />
+							<%= image_tag("event/vote.png", class: "rollover")%>
 						</a>
 					</div>
 				</div>
 				<div class="right">
-					<img src="image/event/content_image2.png"/>
+					<%= image_tag("event/content_image2.png")%>
 					<div class="content_image_explain">
 						<a href="#popup_detail" rel="modal:open" onclick="selectItem(2);">
-							<img src="image/event/content_image_explain2.png"/>
+							<%= image_tag("event/content_image_explain2.png")%>
 						</a>
 					</div>
 					<div class="vote">
 						<a href="#popup_vote" rel="modal:open" onclick="selectItem(2);">
-							<img src="image/event/vote.png" class="rollover" />
+							<%= image_tag("event/vote.png", class: "rollover")%>
 						</a>
 					</div>
 				</div>
 				<div class="clear left">
-					<img src="image/event/content_image3.png"/>
+					<%= image_tag("event/content_image3.png")%>
 					<div class="content_image_explain">
 						<a href="#popup_detail" rel="modal:open" onclick="selectItem(3);">
-							<img src="image/event/content_image_explain3.png"/>
+							<%= image_tag("event/content_image_explain3.png")%>
 						</a>
 					</div>
 					<div class="vote">
 						<a href="#popup_vote" rel="modal:open" onclick="selectItem(3);">
-							<img src="image/event/vote.png" class="rollover" />
+							<%= image_tag("event/vote.png", class: "rollover")%>
 						</a>
 					</div>
 				</div>
 				<div class="right">
-					<img src="image/event/content_image4.png"/>
+					<%= image_tag("event/content_image4.png")%>
 					<div class="content_image_explain">
 						<a href="#popup_detail" rel="modal:open" onclick="selectItem(4);">
-							<img src="image/event/content_image_explain4.png"/>
+							<%= image_tag("event/content_image_explain4.png")%>
 						</a>
 					</div>
 					<div class="vote">
 						<a href="#popup_vote" rel="modal:open" onclick="selectItem(4);">
-							<img src="image/event/vote.png" class="rollover" />
+							<%= image_tag("event/vote.png", class: "rollover")%>
 						</a>
 					</div>
 				</div>
@@ -186,13 +190,13 @@
 	<div class="bottom">
 		<div class="sub table">
 			<a name="event_content_rumor"> </a>
-			<img src="image/event/content_bottom.png"/>
+			<%= image_tag("event/content_bottom.png")%>
 			<div class="button">
 				<a href="#" onclick="share();">
-          <img src="image/event/facebook.png" class="rollover" />
+          <%= image_tag("event/facebook.png", class: "rollover")%>
         </a>
 				<a href="#popup_rumor_blog_url" rel="modal:open">
-          <img src="image/event/blog.png" class="rollover" />
+          <%= image_tag("event/blog.png", class: "rollover")%>
         </a>
 			</div>
 		</div>
@@ -203,35 +207,35 @@
         	<div class="sub table">
 			<div class="top table">
 				<div class="table-cell">
-					<img src="image/event/bottom_top_image.png"/>
+					<%= image_tag("event/bottom_top_image.png")%>
 				</div>
 			</div>
 			<div class="main table">
 				<div class="table-cell">
-					<img src="image/event/bottom_image.png"/>
+					<%= image_tag("event/bottom_image.png")%>
 				</div>
 			</div>
             </div>
         </div>
         <div class="sub_footer">
         	<div class="sub">
-            	<img src="image/event/bottom_text.png"/>
+            	<%= image_tag("event/bottom_text.png")%>
             </div>
         </div>
 </div>
 <div id="popup_detail" class="popup">
 	<div class="sub"> </div>
 	<a href="#popup_vote" rel="modal:open">
-    <img src="./image/popup_detail/vote.png" alt="vote" class="vote rollover" />
+    <%= image_tag("popup_detail/vote.png", alt: "vote", class: "vote rollover")%>
   </a>
 </div>
 <div id="popup_vote" class="popup">
 	<div class="top"> </div>
 	<a href="#popup_input" rel="modal:open">
-    <img src="./image/popup_vote/vote.png" alt="vote" class="vote rollover" />
+    <%= image_tag("popup_vote/vote.png", alt: "vote", class:"vote rollover")%>
   </a>
 	<a href="" rel="modal:close">
-    <img src="./image/popup_vote/return.png" alt="vote" class="return rollover" />
+    <%= image_tag("popup_vote/return.png", alt: "vote", class:"return rollover")%>
   </a>
 </div>
 <form action="" method="post" id="popup_input" class="popup">
@@ -243,7 +247,7 @@
 				<div class="name">
 					<div class="left_image left table">
 						<div class="table-cell">
-							<img src="image/popup_input/name.png">
+							<%= image_tag("popup_input/name.png")%>
 						</div>
 					</div>
 					<div class="right_image left">
@@ -253,7 +257,7 @@
 				<div class="phone">
 					<div class="left_image left table">
 						<div class="table-cell">
-							<img src="image/popup_input/phone.png">
+							<%= image_tag("popup_input/phone.png")%>
 						</div>
 					</div>
 					<div class="right_image left">
@@ -263,7 +267,7 @@
 				<div class="email">
 					<div class="left_image left table">
 						<div class="table-cell">
-							<img src="image/popup_input/email.png">
+							<%= image_tag("popup_input/email.png")%>
 						</div>
 					</div>
 					<div class="right_image left">
@@ -276,14 +280,16 @@
 			<div class="agree">
 				<div class="left table">
 					<div class="table-cell">
-						<img src="image/popup_input/personal.png"/>
+						<%= image_tag("popup_input/personal.png")%>
 					</div>
 				</div>
 				<div class="left table">
 					<div class="table-cell">
 						<div class="nav">
 							<input type="radio" name="agree" id="popup_input_agree" value="1" required />
-							<label for="agree"><img src="image/popup_input/agree.png" /></label>
+							<label for="agree">
+                <%= image_tag("popup_input/agree.png")%>
+              </label>
 						</div>
 					</div>
 				</div>
@@ -291,21 +297,25 @@
 					<div class="table-cell">
 						<div class="nav">
 							<input type="radio" name="agree" id="popup_input_disagree" value="0" required />
-							<label for="disagree"><img src="image/popup_input/disagree.png" /></label>
+							<label for="disagree">
+                <%= image_tag("popup_input/disagree.png")%>
+              </label>
 						</div>
 					</div>
 				</div>
 				<div class="left table">
 					<div class="table-cell">
-						<a href="#popup_personal_info" rel="modal:open"><img src="image/popup_input/look.png" class="rollover" /></a>
+						<a href="#popup_personal_info" rel="modal:open">
+              <%= image_tag("popup_input/look.png", class: "rollover")%>
+            </a>
 					</div>
 				</div>
 			</div>
 			<div class="sub_explain">
-				<img src="image/popup_input/bottom.png"/>
+				<%= image_tag("popup_input/bottom.png")%>
 			</div>
 			<div class="button">
-				<img src="image/popup_input/button.png" onclick="validateInput();" class="rollover" />
+				<%= image_tag("popup_input/button.png", onclick: "validateInput();", class: "rollover")%>
 			</div>
 		</div>
 	</div>
@@ -313,23 +323,23 @@
 <div id="popup_rumor" class="popup">
 	<div class="sub">
 		<div class="title">
-			<img src="image/popup_rumor/title.png">
+			<%= image_tag("popup_rumor/title.png")%>
 		</div>
 		<div class="background2">
 			<div class="nav table">
 				<div class="table-cell">
 					<a href="#" onclick="share();">
-            <img src="image/popup_rumor/facebook.png" class="rollover" />
+            <%= image_tag("popup_rumor/facebook.png", class: "rollover")%>
           </a>
 					<a href="#popup_rumor_blog_url" rel="modal:open">
-            <img src="image/popup_rumor/blog.png" class="rollover" />
+            <%= image_tag("popup_rumor/blog.png", class: "rollover")%>
           </a>
 				</div>
 			</div>
 		</div>
 		<div class="bottom">
 			<a href="#" rel="modal:close">
-        <img src="image/popup_rumor/button.png" class="rollover" />
+        <%= image_tag("popup_rumor/button.png", class: "rollover")%>
       </a>
 		</div>
 	</div>
@@ -337,7 +347,7 @@
 <div id="popup_rumor_blog_url" class="popup">
 	<div class="sub">
 		<div class="title">
-			<img src="image/popup_rumor_blog_url/title.png"/>
+			<%= image_tag("popup_rumor_blog_url/title.png")%>
 		</div>
 		<div class="background2 table">
 			<div class="nav table-cell">
@@ -350,8 +360,8 @@
 			</div>
 		</div>
 		<div class="bottom">
-			<img src="image/popup_rumor_blog_url/posting.png"/>
-			<img src="image/popup_rumor_blog_url/download.png"/>
+			<%= image_tag("popup_rumor_blog_url/posting.png")%>
+			<%= image_tag("popup_rumor_blog_url/download.png")%>
 		</div>
 	</div>
 </div>
@@ -362,7 +372,7 @@
 		});
 	</script>
 	<div class="table personal_agree_image">
-		<img src="image/popup_personal_info/personal_agree.png"/>
+		<%= image_tag("popup_personal_info/personal_agree.png")%>
 	</div>
 	<div class="personal_agree_text">
 		<div class="personal_info_text">

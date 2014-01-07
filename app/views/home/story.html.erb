@@ -3,15 +3,15 @@
 	<div id="header">
 		<div class="sub">
 			<div class="logo left">
-				<img src="./image/logo.png" alt="evezary logo" />
+				<%= image_tag("logo.png", alt: "evezary logo" />
 			</div>
 			<div class="menu right">
         <%= link_to event_path do %>
-				  <img src="./image/top_link_event.png" alt="event" />
+				  <%= image_tag("top_link_event.png", alt: "event" />
         <% end %>
-				<img src="./image/top_link_seperator.png" alt="seperator" />
+				<%= image_tag("top_link_seperator.png", alt: "seperator" />
         <% link_to story_path do %>
-          <img src="./image/top_link_behind_bold.png" alt="behind" />
+          <%= image_tag("top_link_behind_bold.png", alt: "behind" />
         <% end %>
 			</div>
 		</div>
@@ -21,9 +21,9 @@
 	<!-- --------------sub_header--------------- -->
 	<div id="sub_header" style="clear: both;">
 		<div class="sub">
-			<img src="./image/title_logo.png" alt="logo" />
-			<img src="./image/title_seperator.png" alt="seperator" />
-			<img src="./image/title_behind.png" alt="behind" />
+			<%= image_tag("title_logo.png", alt: "logo" />
+			<%= image_tag("title_seperator.png", alt: "seperator" />
+			<%= image_tag("title_behind.png", alt: "behind" />
 		</div>
 	</div>
 	<!-- --------------sub_header--------------- -->
@@ -36,18 +36,18 @@
 			</div>
 			<div class="bottom">
 				<div class="left">
-					<img src="./image/behind_first_title.png" alt="behind first title" class="title" /><br>
-					<img src="./image/behind_first_content.png" alt="behind first content" />
+					<%= image_tag("behind_first_title.png", alt: "behind first title" class="title" /><br>
+					<%= image_tag("behind_first_content.png", alt: "behind first content" />
 				</div>
 				<div class="right">
-					<img src="./image/behind_first_image.png" alt="behind first image" />
+					<%= image_tag("behind_first_image.png", alt: "behind first image" />
 				</div>
 				<div class="clear left">
-					<img src="./image/behind_second_image.png" alt="behind second image" />
+					<%= image_tag("behind_second_image.png", alt: "behind second image" />
 				</div>
 				<div class="right">
-					<img src="./image/behind_second_title.png" alt="behind second title" class="title" /><br>
-					<img src="./image/behind_second_content.png" alt="behind second content" />
+					<%= image_tag("behind_second_title.png", alt: "behind second title" class="title" /><br>
+					<%= image_tag("behind_second_content.png", alt: "behind second content" />
 				</div>
 			</div>
 		</div>
@@ -57,8 +57,8 @@
 	<!-- --------------footer--------------- -->
 	<div id="footer">
 		<div class="sub">
-			<img src="./image/bottom_line.png" alt="bottom line" />
-			<img src="./image/bottom.png" alt="bottom" />
+			<%= image_tag("bottom_line.png", alt: "bottom line" />
+			<%= image_tag("bottom.png", alt: "bottom" />
 		</div>
 	</div>
 	<!-- --------------footer--------------- -->
