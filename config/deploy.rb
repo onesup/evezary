@@ -8,10 +8,10 @@ set :deploy_to, "/home/#{user}/www/#{application}"
 set :deploy_via, :copy
 set :use_sudo, false
 set :scm, "git"
-set :repository, "git@bitbucket.org:#{user}/#{application}.git"
+set :repository, "git@github.com:#{user}/#{application}.git"
 set :branch, "master"
 set :default_environment, {
-      'PATH' => "/home/daul/.rbenv/versions/2.0.0-p0/bin/:$PATH"
+      'PATH' => "/home/#{user}/.rbenv/versions/2.0.0-p353/bin/:$PATH"
     }
 set :keep_releases, 5
 set :shared_children, shared_children + %w{public/uploads}

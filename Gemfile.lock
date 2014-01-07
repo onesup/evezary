@@ -165,8 +165,6 @@ GEM
       oauth2 (~> 0.8.0)
       omniauth (~> 1.0)
     orm_adapter (0.4.0)
-    paloma (2.0.6)
-      jquery-rails
     polyglot (0.3.3)
     pry (0.9.12.2)
       coderay (~> 1.0.5)
@@ -279,7 +277,6 @@ DEPENDENCIES
   mysql2
   omniauth
   omniauth-facebook (~> 1.4.1)
-  paloma
   pry
   rails (= 4.0.0)
   rb-readline (~> 0.5.0.pre.1)
