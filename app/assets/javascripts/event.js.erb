@@ -2,13 +2,7 @@ var imageslider_current = 0;
 var imageslider_last_index;
 var imageslider_sliding = false;
 
-window.onload = function() {
-  
-  $('#popup_input').submit(function(e){
-    e.preventDefault();
-    $('#popup_input').trigger('submit.rails');
-    $.modal.close();
-  });  
+$(function() {
 	
 	imageslider_last_index = $(".imageslider .image").length - 1;
 	
@@ -90,17 +84,29 @@ window.onload = function() {
 		}
 	}
 	
-};
+});
 	
 var selected_item;
 
 function selectItem(index) {
-	selected_item = index;
 	var detail_images = [
-    "<%= asset_path('popup_detail/image_1.png') %>",
-    "<%= asset_path('popup_detail/image_2.png') %>",
-    "<%= asset_path('popup_detail/image_3.png') %>",
-    "<%= asset_path('popup_detail/image_4.png') %>"
+    [
+      "<%= asset_url('popup_detail/image_0_0.png') %>",
+      "<%= asset_url('popup_detail/image_0_1.png') %>",
+      "<%= asset_url('popup_detail/image_0_2.png') %>",
+    ],[
+      "<%= asset_path('popup_detail/image_2_0.png') %>",
+      "<%= asset_path('popup_detail/image_2_1.png') %>",
+      "<%= asset_path('popup_detail/image_2_2.png') %>",
+    ],[
+      "<%= asset_path('popup_detail/image_3_0.png') %>",
+      "<%= asset_path('popup_detail/image_3_1.png') %>",
+      "<%= asset_path('popup_detail/image_3_2.png') %>",
+    ],[
+      "<%= asset_path('popup_detail/image_1_0.png') %>",
+      "<%= asset_path('popup_detail/image_1_1.png') %>",
+      "<%= asset_path('popup_detail/image_1_2.png') %>",
+    ]
   ]
 	var vote_images = [
     "<%= asset_path('popup_vote/image_1.png') %>",
@@ -108,8 +114,34 @@ function selectItem(index) {
     "<%= asset_path('popup_vote/image_3.png') %>",
     "<%= asset_path('popup_vote/image_4.png') %>"
   ]
-	$("#popup_detail .sub").css("background-image", "url('" + detail_images[index-1] + "')");
-	$("#popup_vote .top").css("background-image", "url('" + vote_images[index-1] + "')");
+  
+	selected_item = index;
+	
+  // $("#popup_detail .sub").css("background-image", "url('./image/popup_detail/image_" + index + "_1.png')");
+	$("#popup_detail .sub").css("background-image", "url('"+detail_images[index][0]+"')");
+	$("#popup_detail .popup_detail_navigator img").each(function(__index, item) {
+		if(__index == 0) {
+			$(this).attr("src", "<%= asset_path 'popup_detail/slide_current.png' %>");
+		}
+		else {
+			$(this).attr("src", "<%= asset_path 'popup_detail/slide_other.png' %>");
+		}
+		
+		$(this).click(function() {
+			$("#popup_detail .popup_detail_navigator img").each(function() {
+				$(this).attr("src", "<%= asset_path 'popup_detail/slide_other.png' %>");
+			});
+			$(this).attr("src", "<%= asset_path 'popup_detail/slide_current.png' %>");
+			
+      // $("#popup_detail .sub").css("background-image", "url('./image/popup_detail/image_" + index + "_" + (__index + 1) + ".png')");
+      $("#popup_detail .sub").css("background-image", "url('"+detail_images[index][__index]+"')");
+		});
+		
+		$(this).addClass("rollover");
+	});
+	
+  // $("#popup_vote .top").css("background-image", "url('./image/popup_vote/image_" + index + ".png')");
+  $("#popup_vote .top").css("background-image", "url('"+vote_images[index+1]+"')");
 }
 
 function validateInput() {
@@ -152,7 +184,7 @@ function validateInput() {
 		return;
 	}
 	
-  // if(confirm("이 정보로 경품 이벤트에 참가하시겠습니까?")) {
-	$("#popup_input").submit();
-  // }
+	if(confirm("이 정보로 경품 이벤트에 참가하시겠습니까?")) {
+		$("#popup_input").submit();
+	}
 }

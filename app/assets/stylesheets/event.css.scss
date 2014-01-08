@@ -97,7 +97,7 @@
     width:504px;
     height:294px;
     text-align:center;
-    background:rgba(255,255,255,.5);
+//    background:rgba(255,255,255,.5);
     filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#7FFFFFFF,endColorstr=#7FFFFFFF);
 }
 
@@ -171,7 +171,7 @@ img.guide_text{
 
 #content .event_content .sub .middle > div .vote{
 	width:187px;
-	height:51px;
+	height:56px;
 	position:absolute;
 	right:0;
 	bottom:0px;
@@ -233,7 +233,7 @@ body #content .bottom{
 }
 
 #footer .sub_footer{
-    height:262px;
+    height:340px;
     background-image: image-url("event/background.png");
     background-position:center center;
 }
@@ -242,7 +242,7 @@ body #content .bottom{
     width:1001px;
     height:100%;
     margin:0 auto;
-    padding-top:43px;
+    padding-top:140px;
 }
 /*----------------footer------------------*/
 
@@ -264,9 +264,21 @@ body #content .bottom{
 
 #popup_detail .sub{
     width:755px;
-    height:542px;
+    height:463px;
     margin:0;
     background-repeat:no-repeat;
+}
+
+#popup_detail .popup_detail_navigator {
+    position: absolute;
+    width: 100%;
+    left:218px;
+    bottom:59px;
+    display: inline-block;
+}
+
+#popup_detail .popup_detail_navigator img {
+    margin-right: 10px;
 }
 
 #popup_detail .vote{
@@ -275,7 +287,7 @@ body #content .bottom{
     background-image:image-url("popup_detail/vote.png");
     background-repeat:no-repeat;
     position:absolute;
-    bottom:39px;
+    bottom:118px;
     left:536px;
 }
 /*----------------popup_detail------------------*/
