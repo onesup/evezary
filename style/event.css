@@ -265,9 +265,21 @@ img.guide_text{
 
 #popup_detail .sub{
     width:755px;
-    height:542px;
+    height:463px;
     margin:0;
     background-repeat:no-repeat;
+}
+
+#popup_detail .popup_detail_navigator {
+    position: absolute;
+    width: 100%;
+    left:218px;
+    bottom:59px;
+    display: inline-block;
+}
+
+#popup_detail .popup_detail_navigator img {
+    margin-right: 10px;
 }
 
 #popup_detail .vote{
@@ -276,7 +288,7 @@ img.guide_text{
     background-image:url("../image/popup_detail/vote.png");
     background-repeat:no-repeat;
     position:absolute;
-    bottom:39px;
+    bottom:118px;
     left:536px;
 }
 /*----------------popup_detail------------------*/
