@@ -1,0 +1,12 @@
+ko:
+  devise:
+    sessions:
+      user:
+        signed_out: "로그아웃 되었습니다. 또 오세요 ^^"
+        signed_in: "로그인 되었습니다. 어서 오세요 ^^"
+    omniauth_callbacks:
+      user:
+        success: "페이스북으로 로그인 되었습니다. 어서 오세요^^"
+    failure:
+      user:
+        not_found_in_database: "로그인 실패"

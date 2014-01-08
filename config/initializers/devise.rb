@@ -4,13 +4,13 @@ Devise.setup do |config|
   # The secret key used by Devise. Devise uses this key to generate
   # random tokens. Changing this key will render invalid all existing
   # confirmation, reset password and unlock tokens in the database.
-  config.secret_key = '415fbd8858d0b1e97089e16cbb9c35675cb562b9ae1f962b7eb555468b995dbc4c0528ce3940ae63875f6f94d5946bedade8a4e0cf50a5b3e1744c8913dfc93f'
+  config.secret_key = '5220f423133bd0a7f40e855e3a4d7d45b654409ac57106393b2aa1e2aaed01c2143b05d4e87492efdd9a7b4ade6448a45b8b94d341d10381634df54cc6d107aa'
 
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
-  config.mailer_sender = 'onesup.lee@gmail.com'
+  config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
 
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
@@ -98,7 +98,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 10
 
   # Setup a pepper to generate the encrypted password.
-  # config.pepper = '73821c4a5bc36984d16daa2cd96c17dbecffaf818c6dae4c10b8eb76aa26e104682744de073f36c2c7b1aed271286a7eba542b7501adeaacd0b7255733f65f99'
+  # config.pepper = '4750085e749217b9987ba8b1f13e3323bbd93132e99e86a757e77b5f241cd3aaaff9cc8274a90d4d03749aff0051af1e889373d0504e57f8b642fabaa4e4ba36'
 
   # ==> Configuration for :confirmable
   # A period that the user is allowed to access the website even without
@@ -232,16 +232,7 @@ Devise.setup do |config|
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', :scope => 'user,public_repo'
-  if File.exists? ("#{Rails.root}/config/facebook.yml")
-    FACEBOOK_CONFIG = YAML.load_file("#{Rails.root}/config/facebook.yml")[Rails.env]
-  else
-    FACEBOOK_CONFIG = {app_id: "temp", app_secret: "temp"}
-  end
-  require "omniauth-facebook"
-  # OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE if Rails.env.development? 
-  config.omniauth :facebook, FACEBOOK_CONFIG[:app_id], FACEBOOK_CONFIG[:app_secret],
-           :scope => 'email, user_photos, user_birthday, read_stream, read_mailbox'
-           
+
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
   # change the failure app, you can configure them inside the config.warden block.

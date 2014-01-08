@@ -90,9 +90,20 @@ var selected_item;
 
 function selectItem(index) {
 	selected_item = index;
-	
-	$("#popup_detail .sub").css("background-image", "url('./image/popup_detail/image_" + index + ".png')");
-	$("#popup_vote .top").css("background-image", "url('./image/popup_vote/image_" + index + ".png')");
+	var detail_images = [
+    "<%= asset_path('popup_detail/image_1.png') %>",
+    "<%= asset_path('popup_detail/image_2.png') %>",
+    "<%= asset_path('popup_detail/image_3.png') %>",
+    "<%= asset_path('popup_detail/image_4.png') %>"
+  ]
+	var vote_images = [
+    "<%= asset_path('popup_vote/image_1.png') %>",
+    "<%= asset_path('popup_vote/image_2.png') %>",
+    "<%= asset_path('popup_vote/image_3.png') %>",
+    "<%= asset_path('popup_vote/image_4.png') %>"
+  ]
+	$("#popup_detail .sub").css("background-image", "url('" + detail_images[index-1] + "')");
+	$("#popup_vote .top").css("background-image", "url('" + vote_images[index-1] + "')");
 }
 
 function validateInput() {

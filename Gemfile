@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+gem 'rake', '10.1.1'
 gem 'rails', '4.0.0'
 gem 'mysql2'
 gem 'unicorn'
@@ -16,9 +17,9 @@ gem 'omniauth'
 gem 'omniauth-facebook', '~> 1.4.1'
 gem 'kaminari'
 gem 'koala'
-
+gem 'simple_form'
 # for Rails 4.0
-gem 'simple_form', github: 'plataformatec/simple_form', tag: 'v3.0.0.beta1'
+# gem 'simple_form', github: 'plataformatec/simple_form', tag: 'v3.0.0.beta1'
 # You'll need to include the following dependencies of Summernote
 gem 'font-awesome-rails'
 # This is the right gem to use summernote editor in Rails projects.
