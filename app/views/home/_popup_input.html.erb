@@ -1,4 +1,5 @@
-<%= simple_form_for @user, html: {class:"popup", id:"popup_input"} do |f| %>
+<%= simple_form_for @user, :remote => true, html: {class:"popup", id:"popup_input"} do |f| %>
+  <%= f.input :password, as: :hidden, input_html:{value: "password"} %>
 	<div class="sub">
 		<div class="title"> </div>
 		<div class="background2">
@@ -31,7 +32,7 @@
 						</div>
 					</div>
 					<div class="right_image left">
-						<input type="email" name="email" id="popup_input_email" required />
+						<input type="email" name="user[email]" id="popup_input_email" required />
 					</div>
 				</div>
 			</div>
