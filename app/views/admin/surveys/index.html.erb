@@ -2,7 +2,7 @@
   <!-- block -->
   <div class="block">
     <div class="navbar navbar-inner block-header">
-      <div class="muted pull-left">참여자 목록</div>
+      <div class="muted pull-left">조사 현황</div>
     </div>
     <div class="block-content collapse in">
       <div class="span12">
@@ -11,20 +11,20 @@
             <tr>
               <th>번호</th>
               <th>참여자</th>
-              <th>참여일시</th>
+              <th>득표</th>
             </tr>
           </thead>
           <tbody>
-            <% @users.each do |user| %>
+            <% @surveys.each do |survey| %>
               <tr class="">
                 <td>
-                  <%= link_to(user.id, nil, title: user.id) %>
+                  <%= link_to(survey.id, nil, title: survey.id) %>
                 </td>
                 <td>
-                  <%= user.name %>
+                  <%= survey.title %>
                 </td>
                 <td class="updated_at">
-                  <p><%= user.updated_at.strftime("%m.%d %H:%M") %></p>
+                  <p><%= survey.users.count %></p>
                 </td>
               </tr>
             <% end %>

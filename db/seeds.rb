@@ -5,3 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+puts Survey.create(title: "미니멀스킨", code: "0", total: 0).title
+puts Survey.create(title: "라인업", code: "1", total: 0).title
+puts Survey.create(title: "시티파이", code: "2", total: 0).title
+puts Survey.create(title: "어프라이즈", code: "3", total: 0).title

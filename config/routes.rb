@@ -7,6 +7,7 @@ Evezary::Application.routes.draw do
   namespace :admin do
     get '/' => 'dashboard#index', ad: 'admin'
     resources :users
+    resources :surveys
   end
   
   root :to => "home#index"

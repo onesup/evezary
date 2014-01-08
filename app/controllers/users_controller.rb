@@ -2,6 +2,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     @user.phone = params[:phone1] + "-" + params[:phone2] + "-" + params[:phone3]
+    @user.survey = Survey.find_by_code(params[:survey])
     @user.save
     respond_to do |format|
       format.html {render nothing: true}

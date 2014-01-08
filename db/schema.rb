@@ -14,6 +14,7 @@
 ActiveRecord::Schema.define(version: 20140108172333) do
 
   create_table "surveys", force: true do |t|
+    t.string   "code"
     t.string   "title"
     t.integer  "total"
     t.datetime "created_at"
