@@ -7,27 +7,6 @@ window.onload = function() {
   $('#popup_input').submit(function(e){
     e.preventDefault();
     $('#popup_input').trigger('submit.rails');
-    // var name = $("#popup_input_name").val();
-    // var email = $("#popup_input_email").val();
-    // var phone = $("#popup_input_phone1").val() + "-" + 
-    //             $("#popup_input_phone2").val() + "-" + 
-    //             $("#popup_input_phone3").val();
-    // var action = $("#popup_input").attr("action");
-    // $.ajax({
-    //   type: "POST",
-    //   url: action,
-    //   data: {
-    //     "authenticity_token": 
-    //     "user[password]": "password",
-    //     "user[name]": name,
-    //     "user[email]": email,
-    //     "user[phone]": phone
-    //   },
-    //   headers: {
-    //     'X-Transaction': 'POST Example',
-    //     'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
-    //   }
-    // });  
     $.modal.close();
   });  
 	
@@ -173,7 +152,7 @@ function validateInput() {
 		return;
 	}
 	
-	if(confirm("이 정보로 경품 이벤트에 참가하시겠습니까?")) {
-		$("#popup_input").submit();
-	}
+  // if(confirm("이 정보로 경품 이벤트에 참가하시겠습니까?")) {
+	$("#popup_input").submit();
+  // }
 }
