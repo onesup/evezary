@@ -1,8 +1,5 @@
 Evezary::Application.routes.draw do
-  get 'event' => 'home#index'
-  get 'story' => 'home#story'
-  get 'download_image' => 'home#download_image'
-
+  devise_for :users
   resources :users
 
   namespace :admin do
@@ -11,5 +8,9 @@ Evezary::Application.routes.draw do
     resources :surveys
   end
   
+  get 'event' => 'home#index'
+  get 'story' => 'home#story'
+  get 'download_image' => 'home#download_image'
+  get "logout"  => "devise/sessions#destroy", :as => "logout"  
   root :to => "home#index"
 end
