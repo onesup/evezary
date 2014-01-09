@@ -12,9 +12,9 @@ class UsersController < ApplicationController
     end
   end
   
-  def tracking_code
-    code = User.random_code
-    data = {code: code}
+  def tracking_log
+    user = User.find_by_blog_code params[:id]
+    user
     respond_to do |format|
       format.html {render nothing: true}
       format.json {render json: data}
