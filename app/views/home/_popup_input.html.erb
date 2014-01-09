@@ -68,7 +68,8 @@
 				<div class="left table">
 					<div class="table-cell">
 						<a href="#popup_personal_info" rel="modal:open">
-              <%= image_tag("popup_input/look.png", class: "rollover")%>
+              <img src="<%= asset_path('popup_input/look.png')%>" class="rollover"/>
+              <%#= image_tag("popup_input/look.png", class: "rollover")%>
             </a>
 					</div>
 				</div>
@@ -77,7 +78,7 @@
 				<%= image_tag("popup_input/bottom.png")%>
 			</div>
 			<div class="button">
-        <%= image_submit_tag("popup_input/button.png", onclick: "validateInput();", class: "rollover") %>
+        <%= image_submit_tag("popup_input/button.png", onclick: "validateInput();")%>
 			</div>
 		</div>
 	</div>
