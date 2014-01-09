@@ -12,7 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
-// require turbolinks
+//= require jquery-migrate
+//= require jquery.fixedposition
 //= require jquery.modal.min
 //= require jquery.validate.min
 //= require event

@@ -74,11 +74,11 @@ end
 namespace :db do
   desc "reload the database with seed data"
   task :reset do
-    run "cd #{current_path}; RAILS_ENV=#{rails_env}; rake db:migrate:reset RAILS_ENV=#{rails_env}"
+    run "cd #{current_path}; RAILS_ENV=#{rails_env}; bundle exec rake db:migrate:reset RAILS_ENV=#{rails_env}"
   end
   
   task :seed do
-    run "cd #{current_path}; RAILS_ENV=#{rails_env}; rake db:seed RAILS_ENV=#{rails_env}"
+    run "cd #{current_path}; RAILS_ENV=#{rails_env}; bundle exec rake db:seed RAILS_ENV=#{rails_env}"
   end
   
 end

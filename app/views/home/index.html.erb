@@ -10,7 +10,6 @@ function share() {
 	};
 
 	FB.ui(share, function(response) {
-		console.log(response);
 		if(response && response.post_id) {
 			alert("공유되었습니다.");
 		}
