@@ -9,6 +9,9 @@ class UsersController < ApplicationController
       format.json {render json: data}
     end
   end
+  
+  def tracking_code
+  end
 
   private
 
