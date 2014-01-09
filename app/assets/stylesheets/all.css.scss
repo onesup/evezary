@@ -61,14 +61,14 @@
 
 .rollover {
     opacity: 1;
-    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-    -ms-filter: DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF, endColorstr=#00FFFFFF);
+    -ms-filter: "DXImageTransform.Microsoft.Alpha(Opacity=100)";
+//    -ms-filter: DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF, endColorstr=#00FFFFFF);
 }
 
 .rollover:hover {
     opacity: 0.8;
-    -ms-filter: DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF, endColorstr=#00FFFFFF);
-    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+//    -ms-filter: DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF, endColorstr=#00FFFFFF);
+    -ms-filter: "DXImageTransform.Microsoft.Alpha(Opacity=80)";
     cursor: pointer;
 }
 /*----------------all------------------*/
