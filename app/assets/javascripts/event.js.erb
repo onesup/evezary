@@ -44,28 +44,33 @@ $(document).ready(function() {
 	
 	imageslider_last_index = $(".imageslider .image").length - 1;
 	
-	$(window).resize(function() {
-		
-		var width = $(window).width(); 
-    if(width < 1024) width = 1024;
-		var height = $(".imageslider").height() * (width / $(".imageslider").width());
-		$(".imageslider").width(width);
-		$(".imageslider").height(height);
-		$(".imageslider .images").width(width);
-		$(".imageslider .images").height(height);
-		
-		var total_width = 0;
-		$(".imageslider .image").each(function(index, item) {
-			$(this).css("left", total_width);
-			total_width += width;
-		});
-		
-		$(".imageslider .image img").each(function() {
-			$(this).width(width);
-			$(this).height(height);
-		});
-	});
-	$(window).resize();
+$(window).resize(function() {
+var width = 1920; 
+// if(width < 1024) width = 1024;
+var height = 664;
+
+var width = $(window).width(); 
+    // if(width < 1024) width = 1024;
+var height = $(".imageslider").height() * (width / $(".imageslider").width());
+// $(".imageslider").width(width);
+  $(".imageslider").width($(window).width());
+  // $(".imageslider").height(height);
+  // $(".imageslider .images").width(width);
+  // $(".imageslider .images").height(height);
+
+  var total_width = 0;
+  $(".imageslider .image").each(function(index, item) {
+    $(this).css("left", total_width);
+    total_width += 1920;
+    // total_width += width;
+  });
+
+  $(".imageslider .image img").each(function() {
+    // $(this).width(width);
+    // $(this).height(height);
+  });
+  });
+  $(window).resize();  
 	
 	$(".imageslider .imageslider_left").click(function() {
 		imageslider_slideTo(imageslider_current - 1);

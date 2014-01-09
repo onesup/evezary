@@ -10,6 +10,15 @@
     overflow-y: hidden;
     overflow-x: hidden;
 }
+.imageslider .images {
+  position: absolute;
+  left: 50%;
+  margin-left: -820px;
+    width: 1920px;
+    height: 664px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
 .imageslider .imageslider_left {
     position: absolute;
     top: 50%;
