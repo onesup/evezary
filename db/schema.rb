@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 20140108172333) do
     t.string   "phone"
     t.string   "blog_code"
     t.integer  "survey_id"
+    t.integer  "viral_score",            default: 0
   end
 
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
