@@ -18,6 +18,7 @@ gem 'omniauth-facebook', '~> 1.4.1'
 gem 'kaminari'
 gem 'koala'
 gem 'simple_form'
+gem 'guard-rails'
 # for Rails 4.0
 # gem 'simple_form', github: 'plataformatec/simple_form', tag: 'v3.0.0.beta1'
 # You'll need to include the following dependencies of Summernote
@@ -46,7 +47,6 @@ group :test do
 end
 
 group :test, :development do
-  gem 'guard-rails'
   gem 'rspec-rails'
   gem 'factory_girl_rails'
 end
