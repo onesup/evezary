@@ -1,68 +1,29 @@
 <script>
-	$(function() {
-		$(".menu a:eq(1) img").hover(function() {
-			$(this).attr("src", "<%= asset_path('top_link_behind_bold.png') %>");
-		}, function() {
-			$(this).attr("src", "<%= asset_path('top_link_behind.png') %>");
-		});
-	
-		$("#content .main_content .images").click(function() {
-			$("#content .main_content .sub").hide();
-		});
-	
-		$("#content .main_content .sub .box").click(function() {
-			$("#content .main_content .sub").hide();
-		});
-	
-		$("a[href^='#event_content']").click(function(event){		
-			event.preventDefault();
-			$('html,body').animate({scrollTop:$('[name="'+this.hash.substring(1)+'"]').offset().top}, 300);
-		}); // A href Smooth Scroll
-	});
-		function share() {
-			var share = {
-				method: "feed",
-				name: "League of Legends",
-				link: "leagueoflegends.co.kr",
-				picture: "<%= asset_path('popup_vote/image_1.png') %>",
-				caption: "Welcome to the summoner's lift!",
-				description: "30 seconds to minion spawn!"
-			};
-		
-			FB.ui(share, function(response) {
-				console.log(response);
-				if(response && response.post_id) {
-					alert("Post was published.");
-				}
-				else {
-					alert("Post was not published.");
-				}
-			});
+function share() {
+	var share = {
+		method: "feed",
+		name: "이브자리 콜라보 이벤트",
+		link: "<%= request.original_url %>",
+		picture: "<%= asset_url('popup_vote/image_1.png') %>",
+		caption: "이브자리 콜라보 이벤트에 참여해주세요",
+		description: "이브자리 콜라보 이벤트에 참여해주세요"
+	};
+
+	FB.ui(share, function(response) {
+		console.log(response);
+		if(response && response.post_id) {
+			alert("공유되었습니다.");
 		}
+		else {
+			alert("공유 실패");
+		}
+	});
+}
+
 </script>
 
 <div id="fb-root"> </div>
 <script>
-	window.fbAsyncInit = function() {
-		// init the FB JS SDK
-		FB.init({
-			appId : '219469638238198',
-			status : true,
-			xfbml : true
-		});
-	};
-
-	// Load the SDK asynchronously
-	(function() {
-		if (document.getElementById('facebook-jssdk')) {
-			return;
-		}
-		var firstScriptElement = document.getElementsByTagName('script')[0];
-		var facebookJS = document.createElement('script');
-		facebookJS.id = 'facebook-jssdk';
-		facebookJS.src = '//connect.facebook.net/ko_KR/all.js';
-		firstScriptElement.parentNode.insertBefore(facebookJS, firstScriptElement);
-	}());
 </script>
 <div id="header">
 	<div class="sub">
@@ -188,7 +149,7 @@
 			<a name="event_content_rumor"> </a>
 			<%= image_tag("event/content_bottom.png")%>
 			<div class="button">
-				<a href="#" onclick="share();">
+				<a href="#" id="fb_share">
           <%= image_tag("event/facebook.png", class: "rollover")%>
         </a>
 				<a href="#popup_rumor_blog_url" rel="modal:open">

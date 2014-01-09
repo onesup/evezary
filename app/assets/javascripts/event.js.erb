@@ -2,7 +2,40 @@ var imageslider_current = 0;
 var imageslider_last_index;
 var imageslider_sliding = false;
 
-$(function() {
+$(document).ready(function() {
+  $.ajaxSetup({ cache: true });
+  $.getScript('//connect.facebook.net/ko_KR/all.js', function(){
+    FB.init({
+      appId      : '215087222011906', // App ID from the app dashboard
+      status     : true, // check login status
+      cookie     : true, // enable cookies to allow the server to access the session
+      xfbml      : true  // parse XFBML
+    });       
+    $('#fb_share').bind('click', function(e) {
+      e.preventDefault();
+      share();
+    });
+  });
+  
+	$(".menu a:eq(1) img").hover(function() {
+		$(this).attr("src", "<%= asset_path('top_link_behind_bold.png') %>");
+	}, function() {
+		$(this).attr("src", "<%= asset_path('top_link_behind.png') %>");
+	});
+
+	$("#content .main_content .images").click(function() {
+		$("#content .main_content .sub").hide();
+	});
+
+	$("#content .main_content .sub .box").click(function() {
+		$("#content .main_content .sub").hide();
+	});
+
+	$("a[href^='#event_content']").click(function(event){		
+		event.preventDefault();
+		$('html,body').animate({scrollTop:$('[name="'+this.hash.substring(1)+'"]').offset().top}, 300);
+	}); // A href Smooth Scroll
+  
   $('#popup_input').submit('submit.rails', function(e){
     e.preventDefault();
     $.modal.close();
@@ -12,7 +45,8 @@ $(function() {
 	
 	$(window).resize(function() {
 		
-		var width = $(window).width(); if(width < 1024) width = 1024;
+		var width = $(window).width(); 
+    if(width < 1024) width = 1024;
 		var height = $(".imageslider").height() * (width / $(".imageslider").width());
 		$(".imageslider").width(width);
 		$(".imageslider").height(height);
@@ -33,6 +67,7 @@ $(function() {
 	$(window).resize();
 	
 	$(".imageslider .imageslider_left").click(function() {
+    console.log("click");
 		imageslider_slideTo(imageslider_current - 1);
 	});
 	

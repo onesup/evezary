@@ -3,6 +3,7 @@
 }
 
 .imageslider, .imageslider .images {
+    margin:0 auto;
     width: 1920px;
     height: 664px;
     position: relative;
@@ -459,7 +460,7 @@ body #content .bottom{
 #popup_rumor .sub .title{
     height:129px;
     text-align:center;
-    padding-top:48px;
+    padding-top:38px;
 }
 
 #popup_rumor .sub .background2{
@@ -529,7 +530,7 @@ body #content .bottom{
 }
 
 #popup_rumor_blog_url .sub .bottom img:nth-child(1){
-    padding-top:30px;
+    padding-top:20px;
     padding-bottom:35px;
 }
 /*----------------popup_rumor_blog_url------------------*/

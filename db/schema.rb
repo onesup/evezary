@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 20140108172333) do
     t.datetime "updated_at"
     t.string   "name"
     t.string   "phone"
+    t.string   "blog_code"
     t.integer  "survey_id"
   end
 
