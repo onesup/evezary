@@ -7,7 +7,7 @@ $(document).ready(function() {
   $.ajaxSetup({ cache: true });
   $.getScript('//connect.facebook.net/ko_KR/all.js', function(){
     FB.init({
-      appId      : '215087222011906', // App ID from the app dashboard
+      appId      : '<%= FACEBOOK_CONFIG[:app_id] %>', // App ID from the app dashboard
       status     : true, // check login status
       cookie     : true, // enable cookies to allow the server to access the session
       xfbml      : true  // parse XFBML
@@ -25,11 +25,11 @@ $(document).ready(function() {
 	});
 
 	$("#content .main_content .images").click(function() {
-		$("#content .main_content .sub").hide();
+    // $("#content .main_content .sub").hide();
 	});
 
 	$("#content .main_content .sub .box").click(function() {
-		$("#content .main_content .sub").hide();
+    // $("#content .main_content .sub").hide();
 	});
 
 	$("a[href^='#event_content']").click(function(event){		
