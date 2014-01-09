@@ -5,10 +5,9 @@ class User < ActiveRecord::Base
   devise :database_authenticatable
   
   def self.random_code
-    coffee = %w(evezary) * 2
-    letter = %w(inno) * 2
+    evezary = %w(e v e z a r y) * 3
     digit = %w(4 6 7 9) * 2
-    code = "c" + coffee.shuffle.join[0..5] + "e-l" + letter.shuffle.join[0..5] + "r-" + digit.shuffle.join[0..5]
+    code = "e" + evezary.shuffle.join[0..4] + "y_" + digit.shuffle.join[0..5]
     code
   end
   

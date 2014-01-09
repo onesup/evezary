@@ -32,7 +32,6 @@ group :development do
   gem 'sqlite3'
   gem 'pry'
   gem 'capistrano', '~> 2.15.4'
-  gem 'guard-rails'
 end
 
 group :production do
@@ -41,13 +40,13 @@ end
 
 group :test do
   gem 'capybara'
-  gem 'guard-rails'
   gem 'guard-rspec'
   gem "database_cleaner", '~> 1.2.0'
   gem "email_spec"
 end
 
 group :test, :development do
+  gem 'guard-rails'
   gem 'rspec-rails'
   gem 'factory_girl_rails'
 end
