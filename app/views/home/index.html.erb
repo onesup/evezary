@@ -4,7 +4,7 @@ function share() {
 		method: "feed",
 		name: "이브자리 콜라보 이벤트",
 		link: "<%= request.original_url %>",
-		picture: "<%= asset_url('logo.png') %>",
+		picture: "<%= asset_url('facebook_content.jpg') %>",
 		caption: "[이브자리 x 이노디자인 5주년 기념 이벤트]",
 		description: "지금 대표상품을 선택하시면,해당침구를 선물로 드립니다! 지금 투표하기 > url 침구세트 10개! 경추지지형베개20개! 영화예매권 200장!"
 	};
@@ -91,51 +91,52 @@ function share() {
 				<div class="left">
 					<%= image_tag("event/content_image.png") %>
 					<div class="content_image_explain">
-						<a href="#popup_detail" rel="modal:open" onclick="selectItem(0);">
-							<%= image_tag("event/content_image_explain.png")%>
+						<a href="#popup_detail" rel="modal:open" onclick="selectItem(0);" title="0">
+							<%= image_tag("event/content_image_explain.png", alt:"미니멀스킨")%>
 						</a>
 					</div>
 					<div class="vote">
-						<a href="#popup_vote" rel="modal:open" onclick="selectItem(0);">
+						<a href="#popup_vote" rel="modal:open" onclick="selectItem(0);" title="0">
 							<%= image_tag("event/vote.png", class: "rollover")%>
 						</a>
 					</div>
 				</div>
 				<div class="right">
-					<%= image_tag("event/content_image2.png")%>
-					<div class="content_image_explain">
-						<a href="#popup_detail" rel="modal:open" onclick="selectItem(1);">
-							<%= image_tag("event/content_image_explain2.png")%>
-						</a>
-					</div>
-					<div class="vote">
-						<a href="#popup_vote" rel="modal:open" onclick="selectItem(1);">
-							<%= image_tag("event/vote.png", class: "rollover")%>
-						</a>
-					</div>
-				</div>
-				<div class="clear left">
 					<%= image_tag("event/content_image3.png")%>
 					<div class="content_image_explain">
-						<a href="#popup_detail" rel="modal:open" onclick="selectItem(3);">
-							<%= image_tag("event/content_image_explain3.png")%>
+						<a href="#popup_detail" rel="modal:open" onclick="selectItem(1);" title="1">
+              <%= image_tag("event/content_image_explain2.png", alt:"라인업")%>
 						</a>
 					</div>
 					<div class="vote">
-						<a href="#popup_vote" rel="modal:open" onclick="selectItem(3);">
+						<a href="#popup_vote" rel="modal:open" onclick="selectItem(1);" title="1">
 							<%= image_tag("event/vote.png", class: "rollover")%>
 						</a>
-					</div>
+					</div>          
 				</div>
-				<div class="right">
+				<div class="clear left">
 					<%= image_tag("event/content_image4.png")%>
 					<div class="content_image_explain">
-						<a href="#popup_detail" rel="modal:open" onclick="selectItem(2);">
-							<%= image_tag("event/content_image_explain4.png")%>
+						<a href="#popup_detail" rel="modal:open" onclick="selectItem(2);" title="2">
+							<%= image_tag("event/content_image_explain3.png", alt:"시티파이")%>
 						</a>
 					</div>
 					<div class="vote">
-						<a href="#popup_vote" rel="modal:open" onclick="selectItem(2);">
+						<a href="#popup_vote" rel="modal:open" onclick="selectItem(2);" title="2">
+							<%= image_tag("event/vote.png", class: "rollover")%>
+						</a>
+					</div>          
+				</div>
+				<div class="right">
+          
+					<%= image_tag("event/content_image2.png")%>
+					<div class="content_image_explain">
+						<a href="#popup_detail" rel="modal:open" onclick="selectItem(3);" title="3">
+							<%= image_tag("event/content_image_explain4.png", alt:"어프라이즈")%>
+						</a>
+					</div>
+					<div class="vote">
+						<a href="#popup_vote" rel="modal:open" onclick="selectItem(3);" title="3">
 							<%= image_tag("event/vote.png", class: "rollover")%>
 						</a>
 					</div>
@@ -182,14 +183,17 @@ function share() {
 
 <!-- popup -->
 <div id="popup_detail" class="popup">
-	<div class="sub"> </div>
+	<div class="sub"></div>
+  <div class="detail_text"></div>
 	<div class="popup_detail_navigator">
 		<img /><img /><img />
 	</div>
+  
 	<a href="#popup_vote" rel="modal:open">
     <%= image_tag("popup_detail/vote.png", alt: "vote", class:"vote rollover")%>
   </a>
 </div>
+
 <div id="popup_vote" class="popup">
 	<div class="top"> </div>
 	<a href="#popup_input" rel="modal:open">
@@ -199,10 +203,11 @@ function share() {
     <%= image_tag("popup_vote/return.png", alt: "vote", class:"return rollover")%>
   </a>
 </div>
+
 <div id="popup_rumor" class="popup">
 	<div class="sub">
 		<div class="title">
-			<%= image_tag("popup_rumor/title.png")%>
+			<%= image_tag("popup_rumor/title.png ")%>
 		</div>
 		<div class="background2">
 			<div class="nav table">

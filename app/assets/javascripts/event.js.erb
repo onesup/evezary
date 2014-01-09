@@ -152,20 +152,26 @@ function selectItem(index) {
       "<%= asset_path('popup_detail/image_1_2.png') %>",
     ]
   ]
+  var detail_texts = [
+    "<%= asset_url('popup_detail/image_0_txt.png') %>",
+    "<%= asset_url('popup_detail/image_1_txt.png') %>",
+    "<%= asset_url('popup_detail/image_2_txt.png') %>",
+    "<%= asset_url('popup_detail/image_3_txt.png') %>",
+  ]
 	var vote_images = [
+    "<%= asset_path('popup_vote/image_minimal_skin.png') %>",
     "<%= asset_path('popup_vote/image_1.png') %>",
     "<%= asset_path('popup_vote/image_2.png') %>",
-    "<%= asset_path('popup_vote/image_3.png') %>",
-    "<%= asset_path('popup_vote/image_4.png') %>"
+    "<%= asset_path('popup_vote/image_3.png') %>"
   ]
   
 	selected_item = index;
 	$("#popup_detail .sub").css("background-image", "url('"+detail_images[index][0]+"')");
+  $("#popup_detail .detail_text").css("background-image", "url('"+detail_texts[index]+"')");
 	$("#popup_detail .popup_detail_navigator img").each(function(__index, item) {
 		if(__index == 0) {
 			$(this).attr("src", "<%= asset_path 'popup_detail/slide_current.png' %>");
-		}
-		else {
+		}else{
 			$(this).attr("src", "<%= asset_path 'popup_detail/slide_other.png' %>");
 		}
 		$(this).click(function() {
@@ -177,7 +183,7 @@ function selectItem(index) {
 		});
 		$(this).addClass("rollover");
 	});
-  $("#popup_vote .top").css("background-image", "url('"+vote_images[index+1]+"')");
+  $("#popup_vote .top").css("background-image", "url('" + vote_images[index] + "')");
   $("#popup_input_survey").val(index);
 }
 
