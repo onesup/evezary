@@ -11,11 +11,18 @@ class UsersController < ApplicationController
   end
   
   def tracking_code
+    code = User.random_code
+    data = {code: code}
+    respond_to do |format|
+      format.html {render nothing: true}
+      format.json {render json: data}
+    end
+    
   end
 
   private
 
   def user_params
-    params.require(:user).permit(:name, :phone, :email, :password)
+    params.require(:user).permit(:name, :phone, :email, :password, :blog_code)
   end
 end

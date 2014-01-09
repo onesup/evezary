@@ -39,6 +39,8 @@ $(document).ready(function() {
   
   $('#popup_input').submit('submit.rails', function(e){
     e.preventDefault();
+    var name = $("#popup_input_name").val() + " 님의 공유 URL";
+    $("#blog_code_user_name").text(name);
     $.modal.close();
   });
 	

@@ -3,7 +3,7 @@ function share() {
 	var share = {
 		method: "feed",
 		name: "이브자리 콜라보 이벤트",
-		link: "<%= request.original_url %>",
+		link: "http://event.evezary.co.kr/<%= @user.blog_code %>",
 		picture: "<%= asset_url('facebook_content.jpg') %>",
 		caption: "[이브자리 x 이노디자인 5주년 기념 이벤트]",
 		description: "지금 대표상품을 선택하시면,해당침구를 선물로 드립니다! 지금 투표하기 > url 침구세트 10개! 경추지지형베개20개! 영화예매권 200장!"
@@ -236,17 +236,21 @@ function share() {
 		</div>
 		<div class="background2 table">
 			<div class="nav table-cell">
-				<div>
-					OOO님의 공유 URL
+				<div id="blog_code_user_name">
+          <% unless @user.name.nil? %>
+            <%= @user.name %>님의 공유 URL
+          <% else %>
+            소문내기 전에 응모 부탁드려요^^
+          <% end %>
 				</div>
-				<div>
-					http://collabo.evzary.co.kr/erq123s
+				<div id="blog_code_url">
+					http://collabo.evzary.co.kr/<%= @user.blog_code %>
 				</div>
 			</div>
 		</div>
 		<div class="bottom">
-			<%= image_tag("popup_rumor_blog_url/posting.png")%>
-			<%= link_to image_tag("popup_rumor_blog_url/download.png"), nil %>
+      <%= image_tag("popup_rumor_blog_url/posting.png")%>
+			<%= link_to image_tag("popup_rumor_blog_url/download.png"), download_image_path %>
 		</div>
 	</div>
 </div>
