@@ -1,4 +1,4 @@
-<%= simple_form_for @user, :remote => true, html: {class:"popup", id:"popup_input"} do |f| %>
+<%= simple_form_for @user, :remote => true, html: {class:"popup", id:"popup_viral_input"} do |f| %>
   <%= f.input :password, as: :hidden, input_html:{value: "password"} %>
   <%= f.input :blog_code, as: :hidden, input_html:{value: @user.blog_code} %>
   <input type="hidden" name="survey" id="popup_input_survey" value="">
@@ -14,7 +14,7 @@
 						</div>
 					</div>
 					<div class="right_image left">
-						<input type="text" name="user[name]" id="popup_input_name" maxlength="8" required >
+						<input type="text" name="user[name]" id="popup_viral_input_name" maxlength="8" required >
 					</div>
 				</div>
 				<div class="phone">
@@ -24,7 +24,7 @@
 						</div>
 					</div>
 					<div class="right_image left">
-						<input type="text" name="phone1" id="popup_input_phone1" maxlength="4" required /><input type="text" name="phone2" id="popup_input_phone2" maxlength="4" required /><input type="text" name="phone3" id="popup_input_phone3" maxlength="4" required />
+						<input type="text" name="phone1" id="popup_viral_input_phone1" maxlength="4" required /><input type="text" name="phone2" id="popup_viral_input_phone2" maxlength="4" required /><input type="text" name="phone3" id="popup_viral_input_phone3" maxlength="4" required />
 					</div>
 				</div>
 				<div class="email">
@@ -34,7 +34,7 @@
 						</div>
 					</div>
 					<div class="right_image left">
-						<input type="email" name="user[email]" id="popup_input_email" required />
+						<input type="email" name="user[email]" id="popup_viral_input_email" required />
 					</div>
 				</div>
 			</div>
@@ -49,7 +49,7 @@
 				<div class="left table">
 					<div class="table-cell">
 						<div class="nav">
-							<input type="radio" name="agree" id="popup_input_agree" value="1" required />
+							<input type="radio" name="agree" id="popup_viral_input_agree" value="1" required />
 							<label for="agree">
                 <%= image_tag("popup_input/agree.png")%>
               </label>
@@ -59,7 +59,7 @@
 				<div class="left table">
 					<div class="table-cell">
 						<div class="nav">
-							<input type="radio" name="agree" id="popup_input_disagree" value="0" required />
+							<input type="radio" name="agree" id="popup_viral_input_disagree" value="0" required />
 							<label for="disagree">
                 <%= image_tag("popup_input/disagree.png")%>
               </label>
@@ -68,7 +68,7 @@
 				</div>
 				<div class="left table">
 					<div class="table-cell">
-						<a href="#popup_personal_info" rel="modal:open">
+						<a href="#popup_viral_personal_info" rel="modal:open">
               <img src='<%= asset_path("popup_input/privacy.png")%>' class="rollover" />
               <%#= image_tag("popup_input/look.png", class: "rollover")%>
             </a>
@@ -79,7 +79,7 @@
 				<%= image_tag("popup_input/bottom.png")%>
 			</div>
 			<div class="button">
-        <%= image_submit_tag("popup_input/button.png", onclick: "validateInput();")%>
+        <%= image_submit_tag("popup_input/button.png", onclick: "validateViralInput();")%>
 			</div>
 		</div>
 	</div>

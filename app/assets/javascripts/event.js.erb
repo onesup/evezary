@@ -249,3 +249,47 @@ function validateInput() {
   //   $("#popup_input").submit();
   // }
 }
+function validateViralInput() {
+	var name = $("#popup_viral_input_name").val();
+	var phone1 = $("#popup_viral_input_phone1").val();
+	var phone2 = $("#popup_viral_input_phone2").val();
+	var phone3 = $("#popup_viral_input_phone3").val();
+	var email = $("#popup_viral_input_email").val();
+	var agree = $("#popup_viral_input input[name='agree']:checked").val();
+	
+  if(name == "") {
+    alert("이름을 입력해주세요.");
+    return;
+  }
+  
+  // if(phone1 == "" || phone2 == "" | phone3 == "") {
+  //   alert("휴대폰 번호를 입력해주세요.");
+  //   return;
+  // }
+  
+  if(email == "") {
+    alert("이메일을 입력해주세요.");
+    return;
+  }
+  
+  // var emailRegExp = /([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+  // 
+  // if(!emailRegExp.test(email)) {
+  //   alert("이메일 형식이 올바르지 않습니다.");
+  //   return;
+  // }
+  
+  if(agree == undefined) {
+    alert("개인정보수집 동의 여부에 체크해주세요.");
+    return;
+  }
+  
+  if(agree == "0") {
+    alert("개인정보수집에 동의하시지 않으시면 경품을 받으실 수 없습니다.");
+    return;
+  }
+
+  // if(confirm("이 정보로 경품 이벤트에 참가하시겠습니까?")) {
+  //   $("#popup_input").submit();
+  // }
+}
