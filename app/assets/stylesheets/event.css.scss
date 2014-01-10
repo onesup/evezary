@@ -1,7 +1,12 @@
 /*----------------content------------------*/
 #content .main_content{
+  
 }
 
+.imageslider{
+//  width: 100%;
+  background-image:image-url("event/slide_bg.png");
+}
 .imageslider, .imageslider .images {
     margin:0 auto;
     width: 1680px;
@@ -275,7 +280,7 @@ body #content .bottom{
 /*----------------popup_detail------------------*/
 #popup_detail{
     width:924px;
-    height:623px;
+    height:590px;
     background-image:image-url("popup_detail/background_pattern.png");
     background-repeat:no-repeat;
     padding: 42px;
@@ -303,7 +308,7 @@ body #content .bottom{
     position: absolute;
     width: 100%;
     left:218px;
-    bottom:59px;
+    bottom:38px;
     display: inline-block;
 }
 
@@ -317,7 +322,7 @@ body #content .bottom{
     background-image:image-url("popup_detail/vote.png");
     background-repeat:no-repeat;
     position:absolute;
-    bottom:118px;
+    bottom:86px;
     left:536px;
 }
 /*----------------popup_detail------------------*/
