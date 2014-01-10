@@ -14,9 +14,11 @@ class UsersController < ApplicationController
   
   def tracking_log
     user = User.find_by_blog_code params[:id]
-    user
+    user.viral_score += 1
+    user.save
+    data = {score: user.viral_score}
     respond_to do |format|
-      format.html {render nothing: true}
+      format.html {redirect_to root_path}
       format.json {render json: data}
     end
     

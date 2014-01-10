@@ -9,22 +9,22 @@
         <table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered" id="data-table">
           <thead>
             <tr>
-              <th>번호</th>
               <th>참여자</th>
               <th>참여일시</th>
+              <th>바이럴 점수</th>
             </tr>
           </thead>
           <tbody>
             <% @users.each do |user| %>
               <tr class="">
                 <td>
-                  <%= link_to(user.id, nil, title: user.id) %>
-                </td>
-                <td>
                   <%= user.name %>
                 </td>
                 <td class="updated_at">
                   <p><%= user.updated_at.strftime("%m.%d %H:%M") %></p>
+                </td>
+                <td>
+                  <%= user.viral_score %>
                 </td>
               </tr>
             <% end %>
