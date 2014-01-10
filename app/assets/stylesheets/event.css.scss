@@ -3,9 +3,9 @@
   
 }
 
-.imageslider{
-//  width: 100%;
-  background-image:image-url("event/slide_bg.png");
+.imageslider_wrap{
+  background-image:image-url("event/slide_bg.jpg");
+  background-repeat:repeat-x;
 }
 .imageslider, .imageslider .images {
     margin:0 auto;
