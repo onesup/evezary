@@ -269,9 +269,9 @@ function share() {
 </div>
 <div id="popup_personal_info" class="popup table">
 	<script>
-    // $("#popup_personal_info").on($.modal.BEFORE_CLOSE, function(event, modal) {
-    //   setTimeout(function(){$("#popup_input").modal()}, 10);
-    // });
+    $("#popup_personal_info").on($.modal.BEFORE_CLOSE, function(event, modal) {
+      setTimeout(function(){$("#popup_input").modal()}, 10);
+    });
 	</script>
 	<div class="table personal_agree_image">
 		<%= image_tag("popup_personal_info/personal_agree.png")%>
