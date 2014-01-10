@@ -604,7 +604,10 @@ body #content .bottom{
 }
 
 #popup_personal_info .personal_agree_text .personal_info_text{
-    font-family:'돋움';
+    font-family: 'AppleSDGothicNeo-Thin','Malgun Gothic','Dotum',sans-serif, Arial;
+    letter-spacing: -1px;
+    line-height: 30px;
+    color: #666;
     font-size:11pt;
     overflow-y:auto;
     width:100%;
