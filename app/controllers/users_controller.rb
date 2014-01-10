@@ -29,7 +29,13 @@ class UsersController < ApplicationController
   def is_surveyed
     result = false
     result = true if User.exists?(phone: params[:id]) == 1
-    data = {result: result}
+    if result == true
+      user = User.where(phone: params[:id]).first
+      data = {result: result, name: user.name, blog_code: user.blog_code}
+    else
+      user = User.new
+      data = {result: result}
+    end
     respond_to do |format|
       format.json {render json: data}
     end

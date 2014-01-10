@@ -155,6 +155,10 @@ $(document).ready(function() {
           $("#popup_rumor").modal();
         }else{
           $.get("http://i85.icast-ad.com/track?ccd=1185&mcd=01040601&pcd=1512");
+          var name = data.name + " 님의 공유 URL";
+          $("#blog_code_user_name").text(name);
+          var blog_code = "http://event2.evezary.co.kr/" + data.blog_code;
+          $("#blog_code_url").text(blog_code);
           $("#popup_rumor_again").modal();
         }
   		}
