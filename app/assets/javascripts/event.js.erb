@@ -14,6 +14,7 @@ $(document).ready(function() {
     });       
     $('#fb_share').bind('click', function(e) {
       e.preventDefault();
+      $.get("http://i85.icast-ad.com/track?ccd=1185&mcd=01040601&pcd=1514");
       var input_name = $("#popup_input_name").val().length
       var viral_input_name = $("#popup_viral_input_name").val().length
       if(input_name === 0 && viral_input_name === 0){
@@ -29,7 +30,7 @@ $(document).ready(function() {
     $.get("http://i85.icast-ad.com/track?ccd=1185&mcd=01040601&pcd=1504")
       .done(function(data){
         window.location.href = $('#event_tracking').attr("href");
-      });;
+      });
   });
 
   $('#behind_tracking').bind('click', function(e) {
@@ -37,13 +38,39 @@ $(document).ready(function() {
     $.get("http://i85.icast-ad.com/track?ccd=1185&mcd=01040601&pcd=1505")
       .done(function(data){
         window.location.href = $('#behind_tracking').attr("href");
-      });;
+      });
   });
+  
+  $('#track6').bind('click', function(e) {
+    e.preventDefault();
+    $.get("http://i85.icast-ad.com/track?ccd=1185&mcd=01040601&pcd=1506")
+      .done(function(data){
+        // window.location.href = $('track6').attr("href");
+      });
+  });
+  
+  $('#track13').bind('click', function(e) {
+    e.preventDefault();
+    $.get("http://i85.icast-ad.com/track?ccd=1185&mcd=01040601&pcd=1513")
+      .done(function(data){
+        $.modal.close();
+        // window.location.href = $('track6').attr("href");
+      });
+  });
+  
+  
+  // $('#track12').bind('click', function(e) {
+  //   e.preventDefault();
+  //   $.get("http://i85.icast-ad.com/track?ccd=1185&mcd=01040601&pcd=1512");
+  //     .done(function(data){
+  //       // window.location.href = $('#track12').attr("href");
+  //     });;
+  // });
+  
   // modal callback
   
-  $('#popup_detail').on($.modal.BEFORE_OPEN, function(event, modal) {
-var tag="1502";    
-$.get("");
+  $('#popup_rumor_blog_url').on($.modal.BEFORE_OPEN, function(event, modal) {
+    $.get("http://i85.icast-ad.com/track?ccd=1185&mcd=01040601&pcd=1513");
   });
   
   // $('a[rel="ajax:modal"]').click(function(event) {
@@ -101,6 +128,7 @@ $.get("");
   
   $('#popup_input').submit('submit.rails', function(e){
     e.preventDefault();
+    $.get("http://i85.icast-ad.com/track?ccd=1185&mcd=01040601&pcd=1512");
     var name = $("#popup_input_name").val() + " 님의 공유 URL";
     $("#blog_code_user_name").text(name);
     $.modal.close();
@@ -259,6 +287,8 @@ function selectItem(index) {
 	});
   $("#popup_vote .top").css("background-image", "url('" + vote_images[index] + "')");
   $("#popup_input_survey").val(index);
+  var track_codes=[1508,1509,1510,1511];
+  $.get("http://i85.icast-ad.com/track?ccd=1185&mcd=01040601&pcd=" + track_codes[index]);
 }
 
 function fixPNGs(){

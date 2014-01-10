@@ -63,12 +63,12 @@ function share() {
                   </div>
               </div>
               <div class="box2">
-              	<a href="#event_content_vote">
+              	<a href="#event_content_vote" id="track6">
                   <%= image_tag("event/vote_design.png", class: "left rollover") %>
                 </a>
-                  <a href="#event_content_rumor">
-                    <%= image_tag("event/event_rumor.png", class: "right rollover") %>
-                  </a>
+                <a href="#event_content_rumor" id="track7">
+                  <%= image_tag("event/event_rumor.png", class: "right rollover") %>
+                </a>
               </div>
           </div>
       </div>
@@ -99,7 +99,7 @@ function share() {
 						</a>
 					</div>
 					<div class="vote">
-						<a href="#popup_vote" rel="modal:open" onclick="selectItem(0);" title="0">
+						<a href="#popup_vote" rel="modal:open" onclick="selectItem(0);" title="0" id="vote1">
 							<%= image_tag("event/vote.png", class: "rollover")%>
 						</a>
 					</div>
@@ -112,7 +112,7 @@ function share() {
 						</a>
 					</div>
 					<div class="vote">
-						<a href="#popup_vote" rel="modal:open" onclick="selectItem(1);" title="1">
+						<a href="#popup_vote" rel="modal:open" onclick="selectItem(1);" title="1" id="vote2">
 							<%= image_tag("event/vote.png", class: "rollover")%>
 						</a>
 					</div>          
@@ -125,7 +125,7 @@ function share() {
 						</a>
 					</div>
 					<div class="vote">
-						<a href="#popup_vote" rel="modal:open" onclick="selectItem(2);" title="2">
+						<a href="#popup_vote" rel="modal:open" onclick="selectItem(2);" title="2" id="vote3">
 							<%= image_tag("event/vote.png", class: "rollover")%>
 						</a>
 					</div>          
@@ -140,7 +140,7 @@ function share() {
 						</a>
 					</div>
 					<div class="vote">
-						<a href="#popup_vote" rel="modal:open" onclick="selectItem(3);" title="3">
+						<a href="#popup_vote" rel="modal:open" onclick="selectItem(3);" title="3" id="vote4">
 							<%= image_tag("event/vote.png", class: "rollover")%>
 						</a>
 					</div>
@@ -213,7 +213,7 @@ function share() {
 
 <div id="popup_vote" class="popup">
 	<div class="top"> </div>
-	<a href="#popup_input" rel="modal:open">
+	<a href="#popup_input" rel="modal:open" title="">
     <%= image_tag("popup_vote/vote.png", alt: "vote", class:"vote rollover")%>
   </a>
 	<a href="" rel="modal:close">
@@ -239,7 +239,7 @@ function share() {
 			</div>
 		</div>
 		<div class="bottom">
-			<a href="#" rel="modal:close">
+			<a href="#" id="track13">
         <%= image_tag("popup_rumor/button.png", class: "rollover")%>
       </a>
 		</div>
