@@ -14,8 +14,25 @@ $(document).ready(function() {
     });       
     $('#fb_share').bind('click', function(e) {
       e.preventDefault();
-      share();
+      var input_name = $("#popup_input_name").val().length
+      var viral_input_name = $("#popup_viral_input_name").val().length
+      if(input_name === 0 && viral_input_name === 0){
+        $("#popup_viral_input").modal();
+      }else{
+        share();
+      }
     });
+  });
+  
+  $('#popup_rumor_blog').bind('click', function(e) {
+    e.preventDefault();
+    var input_name = $("#popup_input_name").val().length
+    var viral_input_name = $("#popup_viral_input_name").val().length
+    if(input_name === 0 && viral_input_name === 0){
+      $("#popup_viral_input").modal();
+    }else{
+      $("#popup_rumor_blog_url").modal();
+    }
   });
   
 	$(".menu a:eq(1) img").hover(function() {
