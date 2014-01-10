@@ -4,8 +4,11 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     @user.phone = params[:phone1] + "-" + params[:phone2] + "-" + params[:phone3]
+    result = false if User.exists?(phone: @user.phone) == 1
     @user.survey = Survey.find_by_code(params[:survey])
-    @user.save
+    unless result == false
+      @user.save
+    end
     respond_to do |format|
       format.html {render nothing: true}
       format.json {render json: data}
@@ -21,7 +24,15 @@ class UsersController < ApplicationController
       format.html {redirect_to root_path}
       format.json {render json: data}
     end
-    
+  end
+  
+  def is_surveyed
+    result = false
+    result = true if User.exists?(phone: params[:id]) == 1
+    data = {result: result}
+    respond_to do |format|
+      format.json {render json: data}
+    end
   end
 
   private

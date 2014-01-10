@@ -58,6 +58,16 @@ $(document).ready(function() {
       });
   });
   
+  $('#track13_again').bind('click', function(e) {
+    e.preventDefault();
+    $.get("http://i85.icast-ad.com/track?ccd=1185&mcd=01040601&pcd=1513")
+      .done(function(data){
+        $.modal.close();
+        // window.location.href = $('track6').attr("href");
+      });
+  });
+  
+  
   
   // $('#track12').bind('click', function(e) {
   //   e.preventDefault();
@@ -126,21 +136,54 @@ $(document).ready(function() {
 		$('html,body').animate({scrollTop:$('[name="'+this.hash.substring(1)+'"]').offset().top}, 300);
 	}); // A href Smooth Scroll
   
-  $('#popup_input').submit('submit.rails', function(e){
-    e.preventDefault();
-    $.get("http://i85.icast-ad.com/track?ccd=1185&mcd=01040601&pcd=1512");
-    var name = $("#popup_input_name").val() + " 님의 공유 URL";
-    $("#blog_code_user_name").text(name);
-    $.modal.close();
-    $("#popup_rumor").modal();
+  $('#popup_input').submit('submit.rails', function(e){    
+    e.preventDefault();    
+  	var phone1 = $("#popup_input_phone1").val();
+  	var phone2 = $("#popup_input_phone2").val();
+  	var phone3 = $("#popup_input_phone3").val();
+    var phone = phone1+"-"+phone2+"-"+phone3;
+  	$.ajax({
+  		'url':'/is_surveyed.json?id='+phone,
+  		'dataType':'json',
+  		'data':{},
+  		'success':function(data){
+        if(data.result == false){
+          $.get("http://i85.icast-ad.com/track?ccd=1185&mcd=01040601&pcd=1512");
+          var name = $("#popup_input_name").val() + " 님의 공유 URL";
+          $("#blog_code_user_name").text(name);
+          $.modal.close();
+          $("#popup_rumor").modal();
+        }else{
+          $.get("http://i85.icast-ad.com/track?ccd=1185&mcd=01040601&pcd=1512");
+          $("#popup_rumor_again").modal();
+        }
+  		}
+    });
   });
   
   $('#popup_viral_input').submit('submit.rails', function(e){
-    e.preventDefault();
-    var name = $("#popup_viral_input_name").val() + " 님의 공유 URL";
-    $("#blog_code_user_name").text(name);
-    $.modal.close();
-    $("#popup_rumor").modal();
+    e.preventDefault();    
+  	var phone1 = $("#popup_viral_input_phone1").val();
+  	var phone2 = $("#popup_viral_input_phone2").val();
+  	var phone3 = $("#popup_viral_input_phone3").val();
+    var phone = phone1+"-"+phone2+"-"+phone3;
+  	$.ajax({
+  		'url':'/is_surveyed.json?id='+phone,
+  		'dataType':'json',
+  		'data':{},
+  		'success':function(data){
+        if(data.result == false){
+          $.get("http://i85.icast-ad.com/track?ccd=1185&mcd=01040601&pcd=1512");
+          var name = $("#popup_viral_input_name").val() + " 님의 공유 URL";
+          $("#blog_code_user_name").text(name);
+          $.modal.close();
+          $("#popup_rumor").modal();
+        }else{
+          $.get("http://i85.icast-ad.com/track?ccd=1185&mcd=01040601&pcd=1512");
+          $("#popup_rumor_again").modal();
+        }
+  		}
+    });
   });
   
 	
@@ -294,7 +337,6 @@ function selectItem(index) {
 function fixPNGs(){
   if(jQuery.browser.msie && jQuery.browser.version < 9){ 
     var i;
-    //alert(document.images.length);
     for(i in document.images){
       if(document.images[i].src){
         var imgSrc = document.images[i].src;
@@ -313,16 +355,17 @@ function validateInput() {
 	var phone3 = $("#popup_input_phone3").val();
 	var email = $("#popup_input_email").val();
 	var agree = $("#popup_input input[name='agree']:checked").val();
-	
+  var phone = phone1+"-"+phone2+"-"+phone3;
   if(name == "") {
     alert("이름을 입력해주세요.");
     return;
   }
   
-  // if(phone1 == "" || phone2 == "" | phone3 == "") {
-  //   alert("휴대폰 번호를 입력해주세요.");
-  //   return;
-  // }
+  if(phone1 == "" || phone2 == "" | phone3 == "") {
+    alert("휴대폰 번호를 입력해주세요.");
+    return;
+  }else{
+  }
   
   if(email == "") {
     alert("이메일을 입력해주세요.");

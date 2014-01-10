@@ -653,6 +653,48 @@ body #content .bottom{
 }
 /*----------------popup_rumor------------------*/
 
+/*----------------popup_rumor_again------------------*/
+#popup_rumor_again{
+    width:502px;
+    height:510px;
+    background-image:image-url("popup_rumor/background.png");
+}
+
+#popup_rumor_again .sub{
+    width:400px;
+    height:100%;
+    margin:0 auto;
+}
+
+#popup_rumor_again .sub .title{
+    height:129px;
+    text-align:center;
+    padding-top:38px;
+}
+
+#popup_rumor_again .sub .background2{
+    height:224px;
+    border:1px solid #888888;
+    background-color:rgba(255,255,255,.5);
+}
+
+#popup_rumor_again .sub .background2 .nav{
+    width:246px;
+    height:100%;
+    margin:0 auto;
+}
+
+#popup_rumor_again .sub .background2 .nav img:nth-child(1){
+    margin-bottom:5px;
+}
+
+#popup_rumor_again .sub .bottom{
+    text-align:center;
+    margin-top:30px;
+}
+/*----------------popup_rumor_again------------------*/
+
+
 /*----------------popup_rumor_blog_url------------------*/
 #popup_rumor_blog_url{
     width:502px;
