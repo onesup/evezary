@@ -31,7 +31,8 @@
 /*----------------sub(content)------------------*/
 #sub #content{
     width:100%;
-    margin-top: 30px;
+    margin-top: 0px;
+    background-image:image-url("background.png");
 }
 
 #sub #content .sub{
@@ -41,6 +42,7 @@
 }
 
 #sub #content .top{
+  padding-top:30px;
     height:651px;
     width:100%;
 }
@@ -50,6 +52,7 @@
     margin-top: 60px;
     display:inline-block;
     height: auto;
+    padding-bottom: 80px;
 }
 
 #sub #content .main_content div{
@@ -68,10 +71,10 @@
 
 /*----------------sub(footer)------------------*/
 #sub #footer{
-    margin-top: 80px;
     display:inline-block;
     height:108px;
     width:100%;
+    background-image:image-url("background.png");
 }
 
 #sub #footer .sub{
