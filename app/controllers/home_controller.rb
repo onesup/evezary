@@ -7,7 +7,7 @@ class HomeController < ApplicationController
   end
   
   def download_image
-    send_file Rails.root+"app/assets/images/facebook_content.jpg", :x_sendfile => true,
-    :type=>"image/jpg", :filename => "facebook_content.jpg", :disposition => 'attachment'
+    send_file Rails.root+"app/assets/images/blog_posting.jpg", :x_sendfile => true,
+    :type=>"image/jpg", :filename => "blog_posting.jpg", :disposition => 'attachment'
   end  
 end

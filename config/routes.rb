@@ -7,10 +7,10 @@ Evezary::Application.routes.draw do
     resources :users
     resources :surveys
   end
-  get '/:id', to: 'users#tracking_log'
   get 'event' => 'home#index'
   get 'story' => 'home#story'
   get 'download_image' => 'home#download_image'
   get "logout"  => "devise/sessions#destroy", :as => "logout"  
+  get '/:id', to: 'users#tracking_log'
   root :to => "home#index"
 end
