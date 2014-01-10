@@ -1,9 +1,10 @@
+<script language='javascript' src='http://i85.icast-ad.com/track?ccd=1185&mcd=01040601&pcd=1502'></script>
 <script>
 function share() {
 	var share = {
 		method: "feed",
 		name: "이브자리 콜라보 이벤트",
-		link: "http://event.evezary.co.kr/<%= @user.blog_code %>",
+		link: "http://event2.evezary.co.kr/<%= @user.blog_code %>",
 		picture: "<%= asset_url('facebook_content.jpg') %>",
 		caption: "[이브자리 x 이노디자인 5주년 기념 이벤트]",
 		description: "지금 대표상품을 선택하시면,해당침구를 선물로 드립니다! 지금 투표하기 > url 침구세트 10개! 경추지지형베개20개! 영화예매권 200장!"
@@ -30,9 +31,9 @@ function share() {
 			<%= link_to image_tag("logo.png", alt: "evezary logo"), root_path %>
 		</div>
 		<div class="menu right">
-      <%= link_to image_tag("top_link_event_bold.png", alt: "event"), event_path %>
+      <%= link_to image_tag("top_link_event_bold.png", alt: "event"), event_path, id:"event_tracking" %>
 			<%= image_tag("top_link_seperator.png", alt: "seperator") %>
-			<%= link_to image_tag("top_link_behind.png", alt: "behind"), story_path %>
+			<%= link_to image_tag("top_link_behind.png", alt: "behind"), story_path, id:"behind_tracking" %>
 		</div>
 	</div>
 </div>
@@ -260,7 +261,7 @@ function share() {
           <% end %>
 				</div>
 				<div id="blog_code_url">
-					http://collabo.evzary.co.kr/<%= @user.blog_code %>
+					http://event2.evezary.co.kr/<%= @user.blog_code %>
 				</div>
 			</div>
 		</div>
