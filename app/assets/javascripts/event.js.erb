@@ -20,12 +20,6 @@ $(document).ready(function() {
       type: "GET",
       success: function(response) {
         window.location.href = $('#event_tracking').attr("href");
-      },error:function(XMLHttpRequest,status,error){
-        window.location.href = $('#event_tracking').attr("href");
-      },
-      headers: {
-        'X-Transaction': 'POST Example',
-        'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
       }
     });
   });
@@ -37,12 +31,6 @@ $(document).ready(function() {
       type: "GET",
       success: function(response) {
         window.location.href = $('#behind_tracking').attr("href");
-      },error:function(XMLHttpRequest,status,error){
-        window.location.href = $('#behind_tracking').attr("href");
-      },
-      headers: {
-        'X-Transaction': 'POST Example',
-        'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
       }
     });
   });
@@ -88,16 +76,6 @@ $(document).ready(function() {
     });
   });  
   
-  
-  // $('#track12').bind('click', function(e) {
-  //   e.preventDefault();
-  //   $.get("http://i85.icast-ad.com/track?ccd=1185&mcd=01040601&pcd=1512");
-  //     .done(function(data){
-  //       // window.location.href = $('#track12').attr("href");
-  //     });;
-  // });
-  
-  // modal callback
   
   $('#popup_rumor_blog_url').on($.modal.BEFORE_OPEN, function(event, modal) {
     $.get("http://i85.icast-ad.com/track?ccd=1185&mcd=01040601&pcd=1513");
@@ -182,13 +160,13 @@ $(document).ready(function() {
   		'dataType':'json',
   		'data':{},
   		'success':function(data){
-        var text = "감사합니다. \n당첨자는 2월 7일에 발표됩니다."
-        alert(text);
         if(data.result == false){
           $.get("http://i85.icast-ad.com/track?ccd=1185&mcd=01040601&pcd=1512");
           var name = $("#popup_input_name").val() + " 님의 공유 URL";
           $("#blog_code_user_name").text(name);
           $.modal.close();
+          var text = "감사합니다. \n당첨자는 2월 7일에 발표됩니다."
+          alert(text);
           $("#popup_rumor").modal();
         }else{
           $.get("http://i85.icast-ad.com/track?ccd=1185&mcd=01040601&pcd=1512");
@@ -213,13 +191,13 @@ $(document).ready(function() {
   		'dataType':'json',
   		'data':{},
   		'success':function(data){
-        var text = "감사합니다. \n당첨자는 2월 7일에 발표됩니다."
-        alert(text);
         if(data.result == false){
           $.get("http://i85.icast-ad.com/track?ccd=1185&mcd=01040601&pcd=1512");
           var name = $("#popup_viral_input_name").val() + " 님의 공유 URL";
           $("#blog_code_user_name").text(name);
           $.modal.close();
+          var text = "감사합니다. \n당첨자는 2월 7일에 발표됩니다."
+          alert(text);
           $("#popup_rumor").modal();
         }else{
           $.get("http://i85.icast-ad.com/track?ccd=1185&mcd=01040601&pcd=1512");

@@ -16,4 +16,5 @@
 //= require jquery.fixedposition
 //= require jquery.modal.min
 //= require jquery.validate.min
+//= require jquery.XDomainRequest.js
 //= require event
