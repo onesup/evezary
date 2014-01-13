@@ -10,6 +10,7 @@
           <thead>
             <tr>
               <th>참여자</th>
+              <th>전화번호</th>
               <th>참여일시</th>
               <th>바이럴 점수</th>
             </tr>
@@ -19,6 +20,9 @@
               <tr class="">
                 <td>
                   <%= user.name %>
+                </td>
+                <td>
+                  <%= user.phone unless user.phone.nil? %>
                 </td>
                 <td class="updated_at">
                   <p><%= user.updated_at.strftime("%m.%d %H:%M") %></p>

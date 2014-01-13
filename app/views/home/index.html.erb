@@ -7,7 +7,7 @@ function share() {
 		link: "http://event2.evezary.co.kr/<%= @user.blog_code %>",
 		picture: "<%= asset_url('facebook_content.jpg') %>",
 		caption: "[이브자리 x 이노디자인 5주년 기념 이벤트]",
-		description: "지금 대표상품을 선택하시면,해당침구를 선물로 드립니다! 지금 투표하기 > url 침구세트 10개! 경추지지형베개20개! 영화예매권 200장!"
+		description: "지금 대표상품을 선택하시면,해당침구를 선물로 드립니다! 지금 투표하기 > http://bit.ly/evecollabo 침구세트 10개! 경추지지형베개20개! 영화예매권 200장!"
 	};
 
 	FB.ui(share, function(response) {
