@@ -20,6 +20,12 @@ $(document).ready(function() {
       type: "GET",
       success: function(response) {
         window.location.href = $('#event_tracking').attr("href");
+      },error:function(XMLHttpRequest,status,error){
+        window.location.href = $('#event_tracking').attr("href");
+      },
+      headers: {
+        'X-Transaction': 'POST Example',
+        'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
       }
     });
   });
@@ -31,6 +37,12 @@ $(document).ready(function() {
       type: "GET",
       success: function(response) {
         window.location.href = $('#behind_tracking').attr("href");
+      },error:function(XMLHttpRequest,status,error){
+        window.location.href = $('#behind_tracking').attr("href");
+      },
+      headers: {
+        'X-Transaction': 'POST Example',
+        'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
       }
     });
   });
@@ -50,25 +62,27 @@ $(document).ready(function() {
         // window.location.href = $('track6').attr("href");
       });
   });
-  
   $('#track13').bind('click', function(e) {
     e.preventDefault();
-    $.get("http://i85.icast-ad.com/track?ccd=1185&mcd=01040601&pcd=1513")
-      .done(function(data){
+    $.ajax({
+      url:"http://i85.icast-ad.com/track?ccd=1185&mcd=01040601&pcd=1513",
+      type: "GET",
+      success: function(response) {
         $.modal.close();
-        // window.location.href = $('track6').attr("href");
-      });
+      }
+    });
   });
   
   $('#track13_again').bind('click', function(e) {
     e.preventDefault();
-    $.get("http://i85.icast-ad.com/track?ccd=1185&mcd=01040601&pcd=1513")
-      .done(function(data){
+    $.ajax({
+      url:"http://i85.icast-ad.com/track?ccd=1185&mcd=01040601&pcd=1513",
+      type: "GET",
+      success: function(response) {
         $.modal.close();
-        // window.location.href = $('track6').attr("href");
-      });
-  });
-  
+      }
+    });
+  });  
   
   
   // $('#track12').bind('click', function(e) {
