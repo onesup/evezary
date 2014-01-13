@@ -69,6 +69,8 @@ $(document).ready(function() {
       type: "GET",
       success: function(response) {
         $.modal.close();
+      },error:function(XMLHttpRequest,status,error){
+        $.modal.close();
       }
     });
   });
@@ -79,6 +81,8 @@ $(document).ready(function() {
       url:"http://i85.icast-ad.com/track?ccd=1185&mcd=01040601&pcd=1513",
       type: "GET",
       success: function(response) {
+        $.modal.close();
+      },error:function(XMLHttpRequest,status,error){
         $.modal.close();
       }
     });
