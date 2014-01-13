@@ -820,20 +820,20 @@ body #content .bottom{
 /*----------------popup_rumor_blog_url------------------*/
 
 /*----------------popup_personal_info------------------*/
-#popup_personal_info{
+.popup_personal_info{
     background-image:image-url("popup_personal_info/background.png");
     width:502px;
     height:510px;
 }
 
-#popup_personal_info .personal_agree_image{
+.popup_personal_info .personal_agree_image{
     width:100%;
     text-align:center;
     margin-top:10px;
     margin-bottom:20px;
 }
 
-#popup_personal_info .personal_agree_text{
+.popup_personal_info .personal_agree_text{
     width:400px;
     height:402px;
     background:rgba(255,255,255,.5);
@@ -842,7 +842,7 @@ body #content .bottom{
     padding:15px;
 }
 
-#popup_personal_info .personal_agree_text .personal_info_text{
+.popup_personal_info .personal_agree_text .personal_info_text{
     font-family: 'AppleSDGothicNeo-Thin','Malgun Gothic','Dotum',sans-serif, Arial;
     letter-spacing: -1px;
     line-height: 30px;

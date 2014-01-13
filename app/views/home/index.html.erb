@@ -289,10 +289,35 @@ function share() {
 		</div>
 	</div>
 </div>
-<div id="popup_personal_info" class="popup table">
+<div id="popup_personal_info" class="popup table popup_personal_info">
 	<script>
     $("#popup_personal_info").on($.modal.BEFORE_CLOSE, function(event, modal) {
       setTimeout(function(){$("#popup_input").modal()}, 10);
+    });
+	</script>
+	<div class="table personal_agree_image">
+		<%= image_tag("popup_personal_info/personal_agree.png")%>
+	</div>
+	<div class="personal_agree_text">
+		<div class="personal_info_text">
+			<%=raw render "privacy" %>
+		</div>
+	</div>
+</div>
+<div id="popup_winner" class="popup table">
+	<div class="table personal_agree_image">
+	</div>
+	<div class="personal_agree_text">
+		<div class="personal_info_text">
+			Input Text
+			asdf
+		</div>
+	</div>
+</div>
+<div id="popup_viral_personal_info" class="popup table popup_personal_info">
+	<script>
+    $("#popup_viral_personal_info").on($.modal.BEFORE_CLOSE, function(event, modal) {
+      setTimeout(function(){$("#popup_viral_input").modal()}, 10);
     });
 	</script>
 	<div class="table personal_agree_image">

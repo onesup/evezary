@@ -15,6 +15,7 @@ $(document).ready(function() {
   
   $('#event_tracking').bind('click', function(e) {
     e.preventDefault();
+    alert("event");
     $.get("http://i85.icast-ad.com/track?ccd=1185&mcd=01040601&pcd=1504")
       .done(function(data){
         window.location.href = $('#event_tracking').attr("href");
@@ -23,6 +24,7 @@ $(document).ready(function() {
 
   $('#behind_tracking').bind('click', function(e) {
     e.preventDefault();
+    alert("behind");
     $.get("http://i85.icast-ad.com/track?ccd=1185&mcd=01040601&pcd=1505")
       .done(function(data){
         window.location.href = $('#behind_tracking').attr("href");
