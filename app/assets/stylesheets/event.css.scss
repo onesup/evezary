@@ -415,6 +415,7 @@ body #content .bottom{
     height:598px;
     background-image:image-url("popup_input/background.png");
     background-repeat:no-repeat;
+    display: none;
 }
 
 #popup_input .sub{
@@ -548,8 +549,9 @@ body #content .bottom{
 #popup_viral_input{
     width:502px;
     height:598px;
-    background-image:image-url("popup_viral_input/background.png");
+    background-image:image-url("popup_input/background.png");
     background-repeat:no-repeat;
+    display: none;
 }
 
 #popup_viral_input .sub{
@@ -560,10 +562,11 @@ body #content .bottom{
 }
 
 #popup_viral_input .sub .title{
-    width:187px;
-    height:61px;
+    width:363px;
+    height:57px;
     background-image:image-url("popup_viral_input/title.png");
-    margin:0 auto 30px;
+    margin:0 auto;
+    margin-bottom: 30px;
 }
 
 #popup_viral_input .sub .background2{
@@ -584,7 +587,7 @@ body #content .bottom{
 #popup_viral_input .sub .background2 .nav .explain{
     width:341px;
     height:15px;
-    background-image:image-url("popup_viral_input/explain.png");
+    background-image:image-url("popup_input/explain.png");
     background-repeat:no-repeat;
     margin:0 auto 10px;
 }
@@ -595,7 +598,7 @@ body #content .bottom{
 }
 #popup_viral_input .sub .background2 .nav .phone{
   .right_image input{
-    background-image:image-url("popup_viral_input/phone_bar.png");
+    background-image:image-url("popup_input/phone_bar.png");
     width:84px;
     height:44px;
     padding-left: 5px;
@@ -627,7 +630,7 @@ body #content .bottom{
 }
 
 #popup_viral_input .sub .background2 .nav .name .right_image input{
-    background-image:image-url("popup_viral_input/name_field.png");
+    background-image:image-url("popup_input/name_field.png");
     width:269px;
     height:44px;
     padding-left: 5px;
@@ -638,7 +641,7 @@ body #content .bottom{
 }
 
 #popup_viral_input .sub .background2 .nav .email .right_image input{
-    background-image:image-url("popup_viral_input/email_bar.png");
+    background-image:image-url("popup_input/email_bar.png");
     width:269px;
     height:44px;
     padding-left: 5px;

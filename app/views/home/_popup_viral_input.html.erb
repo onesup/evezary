@@ -1,4 +1,4 @@
-<%= simple_form_for @user, :remote => true, html: {class:"popup_input", id:"popup_viral_input"} do |f| %>
+<%= simple_form_for @user, :remote => true, html: { id:"popup_viral_input"} do |f| %>
   <%= f.input :password, as: :hidden, input_html:{value: "password"} %>
   <%= f.input :blog_code, as: :hidden, input_html:{value: @user.blog_code} %>
   <input type="hidden" name="survey" id="popup_input_survey" value="">
@@ -17,7 +17,7 @@
 						<input type="text" name="user[name]" id="popup_viral_input_name" maxlength="8" required >
 					</div>
 				</div>
-				<div class="phone">
+				<div class="phone clearfix">
 					<div class="left_image left table">
 						<div class="table-cell">
 							<%= image_tag("popup_input/phone.png")%>
@@ -68,9 +68,8 @@
 				</div>
 				<div class="left table">
 					<div class="table-cell">
-						<a href="#popup_viral_personal_info" rel="modal:open">
+						<a href="#popup_personal_info" rel="modal:open">
               <img src='<%= asset_path("popup_input/privacy.png")%>' class="rollover" />
-              <%#= image_tag("popup_input/look.png", class: "rollover")%>
             </a>
 					</div>
 				</div>
