@@ -15,20 +15,24 @@ $(document).ready(function() {
   
   $('#event_tracking').bind('click', function(e) {
     e.preventDefault();
-    alert("event");
-    $.get("http://i85.icast-ad.com/track?ccd=1185&mcd=01040601&pcd=1504")
-      .done(function(data){
+    $.ajax({
+      url:"http://i85.icast-ad.com/track?ccd=1185&mcd=01040601&pcd=1504",
+      type: "GET",
+      success: function(response) {
         window.location.href = $('#event_tracking').attr("href");
-      });
+      }
+    });
   });
 
   $('#behind_tracking').bind('click', function(e) {
     e.preventDefault();
-    alert("behind");
-    $.get("http://i85.icast-ad.com/track?ccd=1185&mcd=01040601&pcd=1505")
-      .done(function(data){
+    $.ajax({
+      url:"http://i85.icast-ad.com/track?ccd=1185&mcd=01040601&pcd=1505",
+      type: "GET",
+      success: function(response) {
         window.location.href = $('#behind_tracking').attr("href");
-      });
+      }
+    });
   });
   
   $('#track6').bind('click', function(e) {
