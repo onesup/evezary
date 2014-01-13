@@ -226,11 +226,13 @@ body #content .bottom{
   #fb_share{
     margin-right: 6px;
   }
-  
 }
 /*----------------content------------------*/
 
 /*----------------footer------------------*/
+#footer{
+  clear: both;
+}
 #footer .sub{
     width:1001px;
     height:100%;
