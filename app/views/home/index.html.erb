@@ -31,9 +31,9 @@ function share() {
 			<%= link_to image_tag("logo.png", alt: "evezary logo"), root_path %>
 		</div>
 		<div class="menu right">
-      <%= link_to image_tag("top_link_event_bold.png", alt: "event"), event_path, id: "event_tracking" %>
-			<%= image_tag("top_link_seperator.png", alt: "seperator") %>
-			<%= link_to image_tag("top_link_behind.png", alt: "behind"), story_path, id: "behind_tracking" %>
+      <%= link_to image_tag("top_link_event_bold.png", alt: "event"), event_path, id: "event_tracking", class:"event_button" %>
+			<%= image_tag("top_link_seperator.png", alt: "seperator", class:"seperator") %>
+			<%= link_to image_tag("top_link_behind.png", alt: "behind"), story_path, id: "behind_tracking", class:"behind_button" %>
 		</div>
 	</div>
 </div>

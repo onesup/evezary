@@ -14,15 +14,15 @@
     position: absolute;
 }
 
-#sub #sub_header .sub img:nth-child(1) {
+#sub #sub_header .sub img.sub_logo {
     left: 5px;
     top: 30px;
 }
-#sub #sub_header .sub img:nth-child(2) {
+#sub #sub_header .sub img.sub_seperator {
     top: 32px;
     left: 275px;
 }
-#sub #sub_header .sub img:nth-child(3) {
+#sub #sub_header .sub img.sub_behind{
     top: 37px;
     left: 300px;
 }
@@ -84,7 +84,7 @@
     text-align: center;
 }
 
-#sub #footer .sub img:nth-child(2) {
+#sub #footer .sub img.footer_text {
     margin-top: 40px;
     display:inline-block;
 }
