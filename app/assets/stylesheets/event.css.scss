@@ -188,8 +188,10 @@ img.guide_text{
 }
 
 #content .main_content .bottom .nav > div img{
-    position:relative;
-    bottom:-4px;
+    position: relative; 
+    bottom: 0px;
+    //position:relative;
+//    bottom:-4px;
 }
 
 #content .event_content{
@@ -222,7 +224,7 @@ img.guide_text{
 #content .event_content .sub .middle > div .content_image_explain{
 	position:absolute;
 	padding-left:10px;
-	bottom:10px;
+	bottom:17px;
 	left:10px;
 }
 
@@ -454,7 +456,22 @@ body #content .bottom{
 
 #popup_input .sub .background2 .nav .name,
 #popup_input .sub .background2 .nav .phone{
-    margin-bottom:10px;
+  margin-bottom:10px;
+}
+#popup_input .sub .background2 .nav .phone{
+  .right_image input{
+    background-image:image-url("popup_input/phone_bar.png");
+    width:84px;
+    height:44px;
+    padding-left: 5px;
+    margin-right:8px;
+    line-height: 44px;
+    font-size: 18px;
+    font-family: 'AppleSDGothicNeo-Thin','Malgun Gothic','Dotum',sans-serif, Arial;
+    #popup_input_phone3{
+      border: 1px solid red;
+    }
+  }
 }
 
 #popup_input .sub .background2 .nav > div{
@@ -466,7 +483,7 @@ body #content .bottom{
     height:44px;
 }
 #popup_input .sub .background2 .nav .right_image{
-    width:80%;
+    width:83%;
     height:44px;
 }
 
@@ -479,18 +496,6 @@ body #content .bottom{
     width:269px;
     height:44px;
     padding-left: 5px;
-    line-height: 44px;
-    font-size: 18px;
-    font-family: 'AppleSDGothicNeo-Thin','Malgun Gothic','Dotum',sans-serif, Arial;
-    
-}
-
-#popup_input .sub .background2 .nav .phone .right_image input{
-    background-image:image-url("popup_input/phone_bar.png");
-    width:84px;
-    height:44px;
-    padding-left: 5px;
-    margin-right:8px;
     line-height: 44px;
     font-size: 18px;
     font-family: 'AppleSDGothicNeo-Thin','Malgun Gothic','Dotum',sans-serif, Arial;
@@ -537,32 +542,36 @@ body #content .bottom{
 }
 /*----------------popup_input------------------*/
 
+
 /*----------------popup_viral_input------------------*/
+
 #popup_viral_input{
-  width:502px;
-  height:598px;
-  background-image:image-url("popup_input/background.png");
-  background-repeat:no-repeat;
-  .sub{
+    width:502px;
+    height:598px;
+    background-image:image-url("popup_viral_input/background.png");
+    background-repeat:no-repeat;
+}
+
+#popup_viral_input .sub{
     width:400px;
     height:100%;
     margin:0 auto;
     padding-top:30px;
-    .title{
-        width:364px;
-        height:57px;
-        background-image:image-url("popup_viral_input/title.png");
-        margin:0 auto 30px;
-        repeat: no-repeat;
-    }
-    .background2{
-        width:400px;
-        height:224px;
-        padding-top:4px;
-        border:1px solid #888888;
-        background-color:rgba(255,255,255,.5);
-    }
-  }
+}
+
+#popup_viral_input .sub .title{
+    width:187px;
+    height:61px;
+    background-image:image-url("popup_viral_input/title.png");
+    margin:0 auto 30px;
+}
+
+#popup_viral_input .sub .background2{
+    width:400px;
+    height:224px;
+    padding-top:4px;
+    border:1px solid #888888;
+    background-color:rgba(255,255,255,.5);
 }
 
 #popup_viral_input .sub .background2 .nav{
@@ -570,16 +579,34 @@ body #content .bottom{
     height:212px;
     margin:0 auto;
     padding:16px 0;
-    .explain{
-        width:341px;
-        height:15px;
-        background-image:image-url("popup_input/explain.png");
-        background-repeat:no-repeat;
-        margin:0 auto 10px;
+}
+
+#popup_viral_input .sub .background2 .nav .explain{
+    width:341px;
+    height:15px;
+    background-image:image-url("popup_viral_input/explain.png");
+    background-repeat:no-repeat;
+    margin:0 auto 10px;
+}
+
+#popup_viral_input .sub .background2 .nav .name,
+#popup_viral_input .sub .background2 .nav .phone{
+  margin-bottom:10px;
+}
+#popup_viral_input .sub .background2 .nav .phone{
+  .right_image input{
+    background-image:image-url("popup_viral_input/phone_bar.png");
+    width:84px;
+    height:44px;
+    padding-left: 5px;
+    margin-right:8px;
+    line-height: 44px;
+    font-size: 18px;
+    font-family: 'AppleSDGothicNeo-Thin','Malgun Gothic','Dotum',sans-serif, Arial;
+    #popup_viral_input_phone3{
+      border: 1px solid red;
     }
-    .name, .phone{
-        margin-bottom:10px;
-    }
+  }
 }
 
 #popup_viral_input .sub .background2 .nav > div{
@@ -587,7 +614,11 @@ body #content .bottom{
 }
 
 #popup_viral_input .sub .background2 .nav .left_image{
-    width:20%;
+    width:17%;
+    height:44px;
+}
+#popup_viral_input .sub .background2 .nav .right_image{
+    width:83%;
     height:44px;
 }
 
@@ -596,7 +627,7 @@ body #content .bottom{
 }
 
 #popup_viral_input .sub .background2 .nav .name .right_image input{
-    background-image:image-url("popup_input/name_field.png");
+    background-image:image-url("popup_viral_input/name_field.png");
     width:269px;
     height:44px;
     padding-left: 5px;
@@ -606,20 +637,8 @@ body #content .bottom{
     
 }
 
-#popup_viral_input .sub .background2 .nav .phone .right_image input{
-    background-image:image-url("popup_input/phone_bar.png");
-    width:84px;
-    height:44px;
-    padding-left: 5px;
-    margin-right:8px;
-    line-height: 44px;
-    font-size: 18px;
-    font-family: 'AppleSDGothicNeo-Thin','Malgun Gothic','Dotum',sans-serif, Arial;
-    
-}
-
 #popup_viral_input .sub .background2 .nav .email .right_image input{
-    background-image:image-url("popup_input/email_bar.png");
+    background-image:image-url("popup_viral_input/email_bar.png");
     width:269px;
     height:44px;
     padding-left: 5px;
@@ -656,7 +675,8 @@ body #content .bottom{
 #popup_viral_input .bottom .button{
     text-align:center;
 }
-/*----------------popup_input------------------*/
+
+/*----------------popup_viral_input------------------*/
 
 
 /*----------------popup_rumor------------------*/

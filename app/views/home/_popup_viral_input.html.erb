@@ -1,4 +1,4 @@
-<%= simple_form_for @user, :remote => true, html: {class:"popup", id:"popup_viral_input"} do |f| %>
+<%= simple_form_for @user, :remote => true, html: {class:"popup_input", id:"popup_viral_input"} do |f| %>
   <%= f.input :password, as: :hidden, input_html:{value: "password"} %>
   <%= f.input :blog_code, as: :hidden, input_html:{value: @user.blog_code} %>
   <input type="hidden" name="survey" id="popup_input_survey" value="">
