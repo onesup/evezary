@@ -81,7 +81,19 @@ $(document).ready(function() {
   
   $('#popup_rumor_blog').bind('click', function(e) {
     e.preventDefault();
-    $.get("http://i85.icast-ad.com/track?ccd=1185&mcd=01040601&pcd=1514");
+    $.get("http://i85.icast-ad.com/track?ccd=1185&mcd=01040601&pcd=1515");
+    var input_name = $("#popup_input_name").val().length
+    var viral_input_name = $("#popup_viral_input_name").val().length
+    if(input_name === 0 && viral_input_name === 0){
+      $("#popup_viral_input").modal();
+    }else{
+      $("#popup_rumor_blog_url").modal();
+    }
+  });
+  
+  $('#rumor_blog').bind('click', function(e) {
+    e.preventDefault();
+    $.get("http://i85.icast-ad.com/track?ccd=1185&mcd=01040601&pcd=1515");
     var input_name = $("#popup_input_name").val().length
     var viral_input_name = $("#popup_viral_input_name").val().length
     if(input_name === 0 && viral_input_name === 0){
@@ -93,7 +105,7 @@ $(document).ready(function() {
   
   $('#fb_share').bind('click', function(e) {
     e.preventDefault();
-    $.get("http://i85.icast-ad.com/track?ccd=1185&mcd=01040601&pcd=1515");
+    $.get("http://i85.icast-ad.com/track?ccd=1185&mcd=01040601&pcd=1514");
     var input_name = $("#popup_input_name").val().length
     var viral_input_name = $("#popup_viral_input_name").val().length
     if(input_name === 0 && viral_input_name === 0){
@@ -102,6 +114,18 @@ $(document).ready(function() {
       share();
     }
   });
+  $('#popup_fb_share').bind('click', function(e) {
+    e.preventDefault();
+    $.get("http://i85.icast-ad.com/track?ccd=1185&mcd=01040601&pcd=1514");
+    var input_name = $("#popup_input_name").val().length
+    var viral_input_name = $("#popup_viral_input_name").val().length
+    if(input_name === 0 && viral_input_name === 0){
+      $("#popup_viral_input").modal();
+    }else{
+      share();
+    }
+  });
+  
 });
   
 	$(".menu a:eq(1) img").hover(function() {
