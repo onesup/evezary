@@ -3,7 +3,7 @@ class Admin::UsersController < ApplicationController
   layout 'admin'
   
   def index
-    @users = User.order("viral_score desc, id desc")
+    @users = User.order("id desc")
   end
 
   def show

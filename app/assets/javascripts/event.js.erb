@@ -12,18 +12,6 @@ $(document).ready(function() {
       cookie     : true, // enable cookies to allow the server to access the session
       xfbml      : true  // parse XFBML
     });       
-    $('#fb_share').bind('click', function(e) {
-      e.preventDefault();
-      $.get("http://i85.icast-ad.com/track?ccd=1185&mcd=01040601&pcd=1514");
-      var input_name = $("#popup_input_name").val().length
-      var viral_input_name = $("#popup_viral_input_name").val().length
-      if(input_name === 0 && viral_input_name === 0){
-        $("#popup_viral_input").modal();
-      }else{
-        share();
-      }
-    });
-  });
   
   $('#event_tracking').bind('click', function(e) {
     e.preventDefault();
@@ -44,6 +32,14 @@ $(document).ready(function() {
   $('#track6').bind('click', function(e) {
     e.preventDefault();
     $.get("http://i85.icast-ad.com/track?ccd=1185&mcd=01040601&pcd=1506")
+      .done(function(data){
+        // window.location.href = $('track6').attr("href");
+      });
+  });
+  
+  $('#track7').bind('click', function(e) {
+    e.preventDefault();
+    $.get("http://i85.icast-ad.com/track?ccd=1185&mcd=01040601&pcd=1507")
       .done(function(data){
         // window.location.href = $('track6').attr("href");
       });
@@ -83,31 +79,9 @@ $(document).ready(function() {
     $.get("http://i85.icast-ad.com/track?ccd=1185&mcd=01040601&pcd=1513");
   });
   
-  // $('a[rel="ajax:modal"]').click(function(event) {
-  // 
-  //   $.ajax({
-  // 
-  //     url: $(this).attr('href'),
-  // 
-  //     success: function(newHTML, textStatus, jqXHR) {
-  //               
-  //       $(newHTML).appendTo('body').modal();
-  //       // alert("modal??");
-  // 
-  //     },
-  // 
-  //     error: function(jqXHR, textStatus, errorThrown) {
-  //       // Handle AJAX errors
-  //     }
-  //   
-  //     
-  // 
-  //   });
-  //   return false;
-  // });
-//   
   $('#popup_rumor_blog').bind('click', function(e) {
     e.preventDefault();
+    $.get("http://i85.icast-ad.com/track?ccd=1185&mcd=01040601&pcd=1514");
     var input_name = $("#popup_input_name").val().length
     var viral_input_name = $("#popup_viral_input_name").val().length
     if(input_name === 0 && viral_input_name === 0){
@@ -116,6 +90,19 @@ $(document).ready(function() {
       $("#popup_rumor_blog_url").modal();
     }
   });
+  
+  $('#fb_share').bind('click', function(e) {
+    e.preventDefault();
+    $.get("http://i85.icast-ad.com/track?ccd=1185&mcd=01040601&pcd=1515");
+    var input_name = $("#popup_input_name").val().length
+    var viral_input_name = $("#popup_viral_input_name").val().length
+    if(input_name === 0 && viral_input_name === 0){
+      $("#popup_viral_input").modal();
+    }else{
+      share();
+    }
+  });
+});
   
 	$(".menu a:eq(1) img").hover(function() {
 		$(this).attr("src", "<%= asset_path('top_link_behind_bold.png') %>");
