@@ -17,7 +17,13 @@ class UsersController < ApplicationController
   
   def tracking_log
     user = User.find_by_blog_code params[:id]
-    user.viral_score += 1
+    begin
+      user.viral_score += 1
+    rescue
+      respond_to do |format|
+        format.html {redirect_to root_path}
+      end    
+    end
     user.save
     data = {score: user.viral_score}
     respond_to do |format|
@@ -47,3 +53,4 @@ class UsersController < ApplicationController
     params.require(:user).permit(:name, :phone, :email, :password, :blog_code)
   end
 end
+
