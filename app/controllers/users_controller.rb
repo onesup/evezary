@@ -23,6 +23,7 @@ class UsersController < ApplicationController
       respond_to do |format|
         format.html {redirect_to root_path}
       end    
+      return
     end
     user.save
     data = {score: user.viral_score}
