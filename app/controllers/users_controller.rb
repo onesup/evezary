@@ -17,19 +17,20 @@ class UsersController < ApplicationController
   
   def tracking_log
     user = User.find_by_blog_code params[:id]
-    begin
+    unless user.nil?
       user.viral_score += 1
-    rescue
+      user.save
+      data = {score: user.viral_score}
       respond_to do |format|
         format.html {redirect_to root_path}
-      end    
-      return
-    end
-    user.save
-    data = {score: user.viral_score}
-    respond_to do |format|
-      format.html {redirect_to root_path}
-      format.json {render json: data}
+        format.json {render json: data}
+      end
+    else
+      data = {score: 0}
+      respond_to do |format|
+        format.html {redirect_to root_path}
+        format.json {render json: data}
+      end
     end
   end
   
