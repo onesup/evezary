@@ -21,7 +21,7 @@
                   <%= link_to(survey.id, nil, title: survey.id) %>
                 </td>
                 <td>
-                  <%= survey.title %>
+                  <%= link_to survey.title, admin_survey_path(survey) %>
                 </td>
                 <td class="updated_at">
                   <p><%= survey.users.count %></p>

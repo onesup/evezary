@@ -6,6 +6,7 @@ class Admin::SurveysController < ApplicationController
   end
 
   def show
-    @survey = Survey.find(params[:id]).users
+    @survey = Survey.find(params[:id])
+    @users = @survey.users.order("id desc")
   end
 end
