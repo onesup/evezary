@@ -14,7 +14,7 @@
 						</div>
 					</div>
 					<div class="right_image left">
-						<input type="text" name="user[name]" id="popup_input_name" maxlength="8" required >
+						<input type="text" name="user[name]" id="popup_input_name" maxlength="8"/>
 					</div>
 				</div>
 				<div class="phone clearfix">
@@ -24,7 +24,7 @@
 						</div>
 					</div>
 					<div class="right_image left">
-						<input type="text" name="phone1" id="popup_input_phone1" maxlength="4" required /><input type="text" name="phone2" id="popup_input_phone2" maxlength="4" required /><input type="text" name="phone3" id="popup_input_phone3" maxlength="4" required />
+						<input type="text" name="phone1" id="popup_input_phone1" maxlength="4" /><input type="text" name="phone2" id="popup_input_phone2" maxlength="4" /><input type="text" name="phone3" id="popup_input_phone3" maxlength="4"/>
 					</div>
 				</div>
 				<div class="email">
@@ -34,7 +34,7 @@
 						</div>
 					</div>
 					<div class="right_image left">
-						<input type="email" name="user[email]" id="popup_input_email" required />
+						<input type="email" name="user[email]" id="popup_input_email"/>
 					</div>
 				</div>
 			</div>
@@ -49,24 +49,14 @@
 				<div class="left table">
 					<div class="table-cell">
 						<div class="nav">
-							<input type="radio" name="agree" id="popup_input_agree" value="1" required />
+							<input type="checkbox" name="agree" id="popup_input_agree"/>
 							<label for="agree">
                 <%= image_tag("popup_input/agree.png")%>
               </label>
 						</div>
 					</div>
 				</div>
-				<div class="left table">
-					<div class="table-cell">
-						<div class="nav">
-							<input type="radio" name="agree" id="popup_input_disagree" value="0" required />
-							<label for="disagree">
-                <%= image_tag("popup_input/disagree.png")%>
-              </label>
-						</div>
-					</div>
-				</div>
-				<div class="left table">
+				<div class="left table privacy_button">
 					<div class="table-cell">
 						<a href="#popup_personal_info" rel="modal:open">
               <img src='<%= asset_path("popup_input/privacy.png")%>' class="rollover" />
@@ -79,7 +69,7 @@
 				<%= image_tag("popup_input/bottom.png")%>
 			</div>
 			<div class="button">
-        <%= image_submit_tag("popup_input/button.png", onclick: "validateInput();")%>
+        <%= image_submit_tag("popup_input/button.png")%>
 			</div>
 		</div>
 	</div>

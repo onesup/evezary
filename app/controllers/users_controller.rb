@@ -44,6 +44,7 @@ class UsersController < ApplicationController
       user = User.new
       data = {result: result}
     end
+    Rails.logger.info("@@@@"+data.to_s)
     respond_to do |format|
       format.json {render json: data}
     end
