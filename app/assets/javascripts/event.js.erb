@@ -364,7 +364,7 @@ var height = $(".imageslider").height() * (width / $(".imageslider").width());
 	
 var selected_item;
 
-function selectItem(index) {
+function selectItem(index, target) {
 	var detail_images = [
     [
       "<%= asset_url('popup_detail/image_0_0.png') %>",
@@ -418,7 +418,13 @@ function selectItem(index) {
   $("#popup_vote .top").css("background-image", "url('" + vote_images[index] + "')");
   $("#popup_input_survey").val(index);
   var track_codes=[1508,1509,1510,1511];
-  $.get("http://i85.icast-ad.com/track?ccd=1185&mcd=01040601&pcd=" + track_codes[index]);
+  var detail_track_codes=[1532,1533,1534,1535];
+  if(target == "detail"){
+    $.get("http://i85.icast-ad.com/track?ccd=1185&mcd=01040601&pcd=" + detail_track_codes[index]);
+  }else if(target == "vote"){
+    $.get("http://i85.icast-ad.com/track?ccd=1185&mcd=01040601&pcd=" + track_codes[index]);
+  }
+  
 }
 
 function fixPNGs(){
