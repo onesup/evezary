@@ -1,7 +1,6 @@
 var imageslider_current = 0;
 var imageslider_last_index;
 var imageslider_sliding = false;
-
 $(document).ready(function() {  
   
   $.ajaxSetup({ cache: true });
@@ -188,8 +187,8 @@ $(document).ready(function() {
             var text = "감사합니다. \n당첨자는 2월 7일에 발표됩니다."
             alert(text);
             $.get("http://i85.icast-ad.com/track?ccd=1185&mcd=01040601&pcd=1512");
-            var name = $("#popup_viral_input_name").val() + " 님의 공유 URL";
-            var code = "http://event2.evezary.co.kr/"+data.blog_code;
+            var name = $("#popup_input_name").val() + " 님의 공유 URL";
+            var code = "http://event2.evezary.co.kr/" + $('meta[name="blog-code"]').attr('content');
             $("#blog_code_user_name").text(name);
             $("#blog_code_url").text(code);
             $("#popup_rumor").modal();
@@ -253,14 +252,14 @@ $(document).ready(function() {
             alert(text);
             $.get("http://i85.icast-ad.com/track?ccd=1185&mcd=01040601&pcd=1512");
             var name = $("#popup_viral_input_name").val() + " 님의 공유 URL";
-            var code = "http://event2.evezary.co.kr/"+data.blog_code;
+            var code = "http://event2.evezary.co.kr/" + $('meta[name="blog-code"]').attr('content');
             $("#blog_code_user_name").text(name);
             $("#blog_code_url").text(code);
             $("#popup_rumor").modal();
           }else{
             $.get("http://i85.icast-ad.com/track?ccd=1185&mcd=01040601&pcd=1512");
             var name = $("#popup_viral_input_name").val() + " 님의 공유 URL";
-            var code = "http://event2.evezary.co.kr/"+data.blog_code;
+            var code = "http://event2.evezary.co.kr/" + data.blog_code;
             $("#blog_code_user_name").text(name);
             $("#blog_code_url").text(code);
             $("#popup_rumor_again").modal();
