@@ -18,7 +18,7 @@ module Evezary
     config.assets.precompile += [
       'application.js', 'application.css', 
       'admin.js', 'admin.css', 
-      'application_ie.js'
+      'application_ie.js',
       'html5.js', 'jquery.fixedposition.js'
     ]
   end
