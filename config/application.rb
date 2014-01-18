@@ -15,6 +15,10 @@ module Evezary
     config.time_zone = 'Asia/Seoul'
     config.i18n.load_path += Dir[Rails.root.join('config', 'locales', 'devise', '*.{rb,yml}').to_s]
     config.i18n.default_locale = :ko
-    config.assets.precompile += ['application.js', 'application.css', 'admin.js', 'admin.css']
+    config.assets.precompile += [
+      'application.js', 'application.css', 
+      'admin.js', 'admin.css', 
+      'html5.js', 'jquery.fixedposition.js'
+    ]
   end
 end
