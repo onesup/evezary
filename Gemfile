@@ -33,6 +33,7 @@ group :development do
   gem 'sqlite3'
   gem 'pry'
   gem 'capistrano', '~> 2.15.4'
+  gem 'quiet_assets'
 end
 
 group :production do

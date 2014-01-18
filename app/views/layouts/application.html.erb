@@ -11,21 +11,20 @@
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
   <!--[if lt IE 9]>
-  <%= javascript_include_tag "html5.js" %>
-  		<style>
-  			article, aside, canvas, details, figcaption, figure, footer, header, hgroup, nav, menu, nav, section { display: block; }
-  		</style>
-  <%= javascript_include_tag "jquery.fixedposition.js" %>
-  <script>
-    $(document).ready(function(){
-       $(".fixedbar").fixedPosition({
-          debug: true,
-          fixedTo: "bottom",
-          effect: "slideDown",
-          effectSpeed: 200
-       });
-    });
-  </script>
+  <%= javascript_include_tag "application_ie", "data-turbolinks-track" => true %>
+  	<style>
+  		article, aside, canvas, details, figcaption, figure, footer, header, hgroup, nav, menu, nav, section { display: block; }
+  	</style>
+    <script>
+      $(document).ready(function(){
+         $(".fixedbar").fixedPosition({
+            debug: true,
+            fixedTo: "bottom",
+            effect: "slideDown",
+            effectSpeed: 200
+         });
+      });
+    </script>
     
   <![endif]-->	
 <script>
