@@ -18,3 +18,5 @@
 //= require jquery.validate.min
 //= require jquery.XDomainRequest.js
 //= require event
+//= require analytics
+
