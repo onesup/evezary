@@ -14,6 +14,7 @@ $(document).ready(function() {
   
   $('#event_tracking').bind('click', function(e) {
     e.preventDefault();
+    ga('send', 'event', 'button', 'click', '상단_이벤트_참여하기_링크_1504');
     $.ajax({
       url:"http://i85.icast-ad.com/track?ccd=1185&mcd=01040601&pcd=1504",
       type: "GET",
@@ -25,6 +26,7 @@ $(document).ready(function() {
 
   $('#behind_tracking').bind('click', function(e) {
     e.preventDefault();
+    ga('send', 'event', 'button', 'click', '상단_비하인드_스토리_링크_1505');
     $.ajax({
       url:"http://i85.icast-ad.com/track?ccd=1185&mcd=01040601&pcd=1505",
       type: "GET",
@@ -36,6 +38,7 @@ $(document).ready(function() {
   
   $('#track6').bind('click', function(e) {
     e.preventDefault();
+    ga('send', 'event', 'button', 'click', '초록색 디자인 투표하기 버튼 1506');
     $.get("http://i85.icast-ad.com/track?ccd=1185&mcd=01040601&pcd=1506")
       .done(function(data){
         // window.location.href = $('track6').attr("href");
@@ -44,6 +47,7 @@ $(document).ready(function() {
   
   $('#track7').bind('click', function(e) {
     e.preventDefault();
+    ga('send', 'event', 'button', 'click', '까만색 이벤트 소문내기 버튼 1507');
     $.get("http://i85.icast-ad.com/track?ccd=1185&mcd=01040601&pcd=1507")
       .done(function(data){
         // window.location.href = $('track6').attr("href");
@@ -51,6 +55,7 @@ $(document).ready(function() {
   });
   $('#track13').bind('click', function(e) {
     e.preventDefault();
+    ga('send', 'event', 'button', 'click', '소문내기 팝업 바로 완료하기 버튼 1513');
     $.ajax({
       url:"http://i85.icast-ad.com/track?ccd=1185&mcd=01040601&pcd=1513",
       type: "GET",
@@ -64,6 +69,7 @@ $(document).ready(function() {
   
   $('#track13_again').bind('click', function(e) {
     e.preventDefault();
+    ga('send', 'event', 'button', 'click', '소문내기 팝업 이미 참여한 경우 완료하기 버튼 1513');
     $.ajax({
       url:"http://i85.icast-ad.com/track?ccd=1185&mcd=01040601&pcd=1513",
       type: "GET",
@@ -77,11 +83,13 @@ $(document).ready(function() {
   
   
   $('#popup_rumor_blog_url').on($.modal.BEFORE_OPEN, function(event, modal) {
+    ga('send', 'event', 'button', 'popup', '블로그 소문내기 url 표시 팝업 1513');
     $.get("http://i85.icast-ad.com/track?ccd=1185&mcd=01040601&pcd=1513");
   });
   
   $('#popup_rumor_blog').bind('click', function(e) {
     e.preventDefault();
+    ga('send', 'event', 'button', 'click', 'sns 소문내기 팝업의 블로그 소문내기 버튼 1515');
     $.get("http://i85.icast-ad.com/track?ccd=1185&mcd=01040601&pcd=1515");
     var input_name = $("#popup_input_name").val().length
     var viral_input_name = $("#popup_viral_input_name").val().length
@@ -94,6 +102,7 @@ $(document).ready(function() {
   
   $('#rumor_blog').bind('click', function(e) {
     e.preventDefault();
+    ga('send', 'event', 'button', 'click', '메인화면의 블로그 소문내기 버튼 1515');
     $.get("http://i85.icast-ad.com/track?ccd=1185&mcd=01040601&pcd=1515");
     var input_name = $("#popup_input_name").val().length
     var viral_input_name = $("#popup_viral_input_name").val().length
@@ -106,6 +115,7 @@ $(document).ready(function() {
   
   $('#fb_share').bind('click', function(e) {
     e.preventDefault();
+    ga('send', 'event', 'button', 'click', '메인화면의 페이스북 소문내기 버튼 1514');
     $.get("http://i85.icast-ad.com/track?ccd=1185&mcd=01040601&pcd=1514");
     var input_name = $("#popup_input_name").val().length
     var viral_input_name = $("#popup_viral_input_name").val().length
@@ -117,6 +127,7 @@ $(document).ready(function() {
   });
   $('#popup_fb_share').bind('click', function(e) {
     e.preventDefault();
+    ga('send', 'event', 'button', 'click', 'sns 소문내기 팝업의 페이스북 소문내기 버튼 1514');
     $.get("http://i85.icast-ad.com/track?ccd=1185&mcd=01040601&pcd=1514");
     var input_name = $("#popup_input_name").val().length
     var viral_input_name = $("#popup_viral_input_name").val().length
@@ -150,6 +161,7 @@ $(document).ready(function() {
   
   $('#popup_input').submit(function(e){    
     e.preventDefault();
+    ga('send', 'event', 'submit', 'click', '투표 submit');
   }).validate({
     rules: {
       "user[name]": { required: true },
@@ -214,6 +226,7 @@ $(document).ready(function() {
 
   $('#popup_viral_input').submit(function(e){    
     e.preventDefault();
+    ga('send', 'event', 'submit', 'click', '소문내기 submit');
   }).validate({
     rules: {
       "user[name]": { required: true },
@@ -419,8 +432,10 @@ function selectItem(index, target) {
   var track_codes=[1508,1509,1510,1511];
   var detail_track_codes=[1532,1533,1534,1535];
   if(target == "detail"){
+    ga('send', 'event', 'submit', 'click', '제품 돋보기 클릭 ' + detail_track_codes[index]);
     $.get("http://i85.icast-ad.com/track?ccd=1185&mcd=01040601&pcd=" + detail_track_codes[index]);
   }else if(target == "vote"){
+    ga('send', 'event', 'submit', 'click', '제품 투표하기 클릭' + track_codes[index]);
     $.get("http://i85.icast-ad.com/track?ccd=1185&mcd=01040601&pcd=" + track_codes[index]);
   }
   
