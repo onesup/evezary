@@ -432,10 +432,10 @@ function selectItem(index, target) {
   var track_codes=[1508,1509,1510,1511];
   var detail_track_codes=[1532,1533,1534,1535];
   if(target == "detail"){
-    ga('send', 'event', 'submit', 'click', '제품 돋보기 클릭 ' + detail_track_codes[index]);
+    ga('send', 'event', 'click', 'click', '제품 돋보기 클릭 ' + detail_track_codes[index]);
     $.get("http://i85.icast-ad.com/track?ccd=1185&mcd=01040601&pcd=" + detail_track_codes[index]);
   }else if(target == "vote"){
-    ga('send', 'event', 'submit', 'click', '제품 투표하기 클릭' + track_codes[index]);
+    ga('send', 'event', 'click', 'click', '제품 투표하기 클릭' + track_codes[index]);
     $.get("http://i85.icast-ad.com/track?ccd=1185&mcd=01040601&pcd=" + track_codes[index]);
   }
   
