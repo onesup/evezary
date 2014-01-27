@@ -4,10 +4,15 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     @user.phone = params[:phone1] + "-" + params[:phone2] + "-" + params[:phone3]
+    result = true
     result = false if User.exists?(phone: @user.phone) == 1
+    new_year = Time.now.beginning_of_year
+    end_of_event = (new_year + 26.days).end_of_day
     @user.survey = Survey.find_by_code(params[:survey])
-    unless result == false
-      @user.save
+    if Time.now < end_of_event
+      if result == true
+        @user.save
+      end
     end
     respond_to do |format|
       format.html {render nothing: true}
@@ -43,6 +48,11 @@ class UsersController < ApplicationController
     else
       user = User.new
       data = {result: result}
+    end
+    new_year = Time.now.beginning_of_year
+    end_of_event = (new_year + 26.days).end_of_day
+    if end_of_event < Time.now
+      data = {result: "timeover"}
     end
     Rails.logger.info("@@@@"+data.to_s)
     respond_to do |format|
