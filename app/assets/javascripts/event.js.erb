@@ -91,12 +91,15 @@ $(document).ready(function() {
     e.preventDefault();
     ga('send', 'event', 'button', 'click', 'sns 소문내기 팝업의 블로그 소문내기 버튼 1515');
     $.get("http://i85.icast-ad.com/track?ccd=1185&mcd=01040601&pcd=1515");
+    var text = "죄송합니다. \n이벤트가 종료되었습니다. \n(1월 27일 종료)"
+    alert(text);
+    
     var input_name = $("#popup_input_name").val().length
     var viral_input_name = $("#popup_viral_input_name").val().length
     if(input_name === 0 && viral_input_name === 0){
-      $("#popup_viral_input").modal();
+      // $("#popup_viral_input").modal();
     }else{
-      $("#popup_rumor_blog_url").modal();
+      // $("#popup_rumor_blog_url").modal();
     }
   });
   
@@ -104,12 +107,14 @@ $(document).ready(function() {
     e.preventDefault();
     ga('send', 'event', 'button', 'click', '메인화면의 블로그 소문내기 버튼 1515');
     $.get("http://i85.icast-ad.com/track?ccd=1185&mcd=01040601&pcd=1515");
+    var text = "죄송합니다. \n이벤트가 종료되었습니다. \n(1월 27일 종료)"
+    alert(text);
     var input_name = $("#popup_input_name").val().length
     var viral_input_name = $("#popup_viral_input_name").val().length
     if(input_name === 0 && viral_input_name === 0){
-      $("#popup_viral_input").modal();
+      // $("#popup_viral_input").modal();
     }else{
-      $("#popup_rumor_blog_url").modal();
+      // $("#popup_rumor_blog_url").modal();
     }
   });
   
@@ -117,24 +122,31 @@ $(document).ready(function() {
     e.preventDefault();
     ga('send', 'event', 'button', 'click', '메인화면의 페이스북 소문내기 버튼 1514');
     $.get("http://i85.icast-ad.com/track?ccd=1185&mcd=01040601&pcd=1514");
+    var text = "죄송합니다. \n이벤트가 종료되었습니다. \n(1월 27일 종료)"
+    alert(text);
+    
     var input_name = $("#popup_input_name").val().length
     var viral_input_name = $("#popup_viral_input_name").val().length
     if(input_name === 0 && viral_input_name === 0){
-      $("#popup_viral_input").modal();
+      // $("#popup_viral_input").modal();
     }else{
-      share();
+      // share();
     }
   });
   $('#popup_fb_share').bind('click', function(e) {
     e.preventDefault();
     ga('send', 'event', 'button', 'click', 'sns 소문내기 팝업의 페이스북 소문내기 버튼 1514');
     $.get("http://i85.icast-ad.com/track?ccd=1185&mcd=01040601&pcd=1514");
+    
+    var text = "죄송합니다. \n이벤트가 종료되었습니다. \n(1월 27일 종료)"
+    alert(text);
+    
     var input_name = $("#popup_input_name").val().length
     var viral_input_name = $("#popup_viral_input_name").val().length
     if(input_name === 0 && viral_input_name === 0){
-      $("#popup_viral_input").modal();
+      // $("#popup_viral_input").modal();
     }else{
-      share();
+      // share();
     }
   });
   
@@ -435,6 +447,8 @@ function selectItem(index, target) {
 	});
   $("#popup_vote .top").css("background-image", "url('" + vote_images[index] + "')");
   $("#popup_input_survey").val(index);
+  var text = "죄송합니다. \n이벤트가 종료되었습니다. \n(1월 27일 종료)"
+  alert(text);
   var track_codes=[1508,1509,1510,1511];
   var detail_track_codes=[1532,1533,1534,1535];
   if(target == "detail"){
