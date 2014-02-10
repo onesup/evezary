@@ -16,7 +16,7 @@
             </tr>
           </thead>
           <tbody>
-            <% time_iterate(Time.now.beginning_of_month, Time.now.end_of_month, 1.day) do |time|%>
+            <% time_iterate(Time.now.beginning_of_year, Time.now.end_of_month, 1.day) do |time|%>
               <tr class="">
                 <td><%= time.strftime("%m-%d")%></td>
                 <td><%= User.daily_count time %></td>
